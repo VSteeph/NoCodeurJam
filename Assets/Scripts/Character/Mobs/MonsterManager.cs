@@ -30,10 +30,8 @@ public class MonsterManager : CharacterManager
 
     private void FixedUpdate()
     {
-        Debug.Log(direction.magnitude);
         if (direction.magnitude > range)
         {
-            Debug.Log("Moving");
             if (!isMoving)
             {
                 isMoving = true;
@@ -43,10 +41,15 @@ public class MonsterManager : CharacterManager
         }
         else
         {
-            Debug.Log("Attacking");
             isMoving = false;
             OnShot();
         }
+    }
+
+    public override void OnDeath()
+    {
+        base.OnDeath();
+        Destroy(gameObject);
     }
 
     private void BlockMovement()

@@ -29,7 +29,7 @@ public class meleeShotAbility : ShotAbility
                 var targetCharacterManager = hit.collider.GetComponent<CharacterManager>();
                 if(targetCharacterManager != null )
                 {
-                    targetCharacterManager.OnHit(characterManager.loadedBullet.damage);
+                    targetCharacterManager.OnHit(characterManager.loadedBullet.damage, transform.position);
                 }
             }
         }

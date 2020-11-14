@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &650839948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 650839949}
+  m_Layer: 13
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &650839949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650839948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5275338560578991512}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5275338560578991515
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,6 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5275338560578991512}
+  - component: {fileID: 843847273}
   m_Layer: 13
   m_Name: Gun
   m_TagString: Untagged
@@ -26,10 +57,28 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 650839949}
   m_Father: {fileID: 5275338560763824484}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &843847273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5275338560578991515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf0da3ca40bc5f4c86649201d2ef062, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visual: {fileID: 0}
+  speed: 0
+  damage: 1
+  range: 4
+  lifeDuration: 0
 --- !u!1 &5275338560633929633
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5275338560633929662}
   - component: {fileID: 5275338560633929663}
+  - component: {fileID: 1746371628}
   m_Layer: 13
   m_Name: Audio
   m_TagString: Untagged
@@ -84,6 +134,25 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 3.2
+--- !u!114 &1746371628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5275338560633929633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3517f7f87685e459eabb2ffd059ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterManager: {fileID: 5275338560763824485}
+  ShootEvent: 
+  DodgeEvent: 
+  HitEvent: 
+  RobotIdle: 
+  RobotHit: 
+  RobotDeath: 
 --- !u!1 &5275338560763824488
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,7 +170,7 @@ GameObject:
   - component: {fileID: 5275338560763824482}
   m_Layer: 13
   m_Name: MobChampignon
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,7 +207,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -156,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffed581e58a740d4fa5681f3db558cdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpawnPoint: {fileID: 0}
+  bulletSpawnPoint: {fileID: 650839949}
   projectile: {fileID: 0}
   characterManager: {fileID: 5275338560763824485}
 --- !u!61 &5275338560763824489
@@ -169,7 +238,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -201,19 +270,23 @@ MonoBehaviour:
   rb: {fileID: 5275338560763824487}
   col: {fileID: 5275338560763824489}
   speed: 10
-  health: 100
+  health: 5
+  currentHealth: 0
   Energy: 100
   isInvulnerable: 0
   isMoving: 0
   canMove: 1
   canDodge: 1
   canShot: 1
+  pushBackOnHit: 24
+  framesToStopPushBack: 35
   shotCooldown: 0.5
-  loadedBullet: {fileID: 0}
+  loadedBullet: {fileID: 843847273}
   monsterMovement: {fileID: 5275338560763824486}
-  target: {fileID: 0}
   range: 2
   attackTimer: 0.5
+  target: {fileID: 0}
+  playerManager: {fileID: 0}
 --- !u!114 &5275338560763824486
 MonoBehaviour:
   m_ObjectHideFlags: 0
