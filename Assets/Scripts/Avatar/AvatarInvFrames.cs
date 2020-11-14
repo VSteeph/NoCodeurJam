@@ -7,29 +7,43 @@ public class AvatarInvFrames : MonoBehaviour
 {
     [Header("Refs")]
     [SerializeField] BoxCollider2D col;
-    [SerializeField] bool invincible;
     private AvatarManager avatarManager;
+    private int invulnerableFrameCount;
+    private int currentFrame;
 
     void Awake()
     {
         avatarManager = this.GetComponent<AvatarManager>();
     }
-    public void SetInvFrames(float time)
+
+    private void FixedUpdate()
     {
-        StopAllCoroutines();
-        invincible = true;
-        col.enabled = false;
-        StartCoroutine(WaitToGiveBack(time));
+        if (avatarManager.isInvulnerable)
+        {
+            if (currentFrame < invulnerableFrameCount)
+            {
+                currentFrame++;
+            }
+            else
+            {
+                StopInvulnerability();
+            }
+        }
     }
 
-    IEnumerator WaitToGiveBack(float time)
+    public void StartInvulnerabilityFrame(int nbFrames)
     {
-        yield return new WaitForSeconds(time);
-        invincible = false;
+        Debug.Log("Invulnerable");
+        avatarManager.isInvulnerable = true;
+        invulnerableFrameCount = nbFrames;
+        currentFrame = 0;
+        col.enabled = false;
+    }
+
+    private void StopInvulnerability()
+    {
+        Debug.Log("No longer Invulnerable");
+        avatarManager.isInvulnerable = false;
         col.enabled = true;
-        if(avatarManager.movement.move) {
-            avatarManager.movement.move = false;
-            avatarManager.dodge.Dodge = false;
-        }
     }
 }

@@ -4,15 +4,39 @@ using UnityEngine;
 
 public class GunAim : MonoBehaviour
 {
-    public bool player;
+    [SerializeField] private AvatarManager avatarManager;
+    public Transform aim;
+    public Transform gun;
+    private Plane plane;
+
+    private void Start()
+    {
+        plane = new Plane(-transform.forward, transform.position);
+    }
     void Update()
     {
-        if(player)
-        {
-            Vector3 MousePos = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0.0f);
-            float angle = Vector3.Angle(this.transform.parent.position-this.transform.parent.right, this.transform.parent.position-MousePos);
-            this.transform.rotation = Quaternion.Euler(0.0f,0.0f, angle);
-            this.transform.LookAt(MousePos, this.transform.forward);
-        }
+        avatarManager.mousePosition = GetMouseImpact();
+        var angle = GetRadAngleBetweenGunAndPoint(avatarManager.mousePosition);
+        gun.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
+
+    private Vector3 GetMouseImpact()
+    {
+        Vector3 hitpoint = Vector3.zero;
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        float enter = 0.0f;
+        if (plane.Raycast(ray, out enter))
+        {
+            hitpoint = ray.GetPoint(enter);
+        }
+        return hitpoint;
+    }
+
+    private float GetRadAngleBetweenGunAndPoint(Vector3 impactPoint)
+    {
+        Vector3 normalizedDifference = Vector3.Normalize(impactPoint - aim.position);
+        var degreeToRotate = Mathf.Atan2(normalizedDifference.y, normalizedDifference.x) * Mathf.Rad2Deg;
+        return degreeToRotate;
+    }
+
 }

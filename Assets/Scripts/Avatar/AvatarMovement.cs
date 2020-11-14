@@ -5,11 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(AvatarManager))]
 public class AvatarMovement : MonoBehaviour
 {
-    public Vector2 InputVector;
+    public Vector2 InputVector { get; private set; }
     public bool move;
     private AvatarManager avatarManager;
 
-    private void Awake()
+    private void Start()
     {
         avatarManager = this.GetComponent<AvatarManager>();
         avatarManager.rb = this.GetComponent<Rigidbody2D>();
@@ -17,18 +17,20 @@ public class AvatarMovement : MonoBehaviour
 
     private void Update()
     {
-        if(!move)
+        if (avatarManager.canMoveWithInput)
         {
             float x = Input.GetAxis("Horizontal");
             float y = Input.GetAxis("Vertical");
             InputVector = new Vector2(x, y);
-            if(InputVector.magnitude > 1) InputVector.Normalize();
         }
     }
 
     private void FixedUpdate()
     {
-        Vector2 movementVector = InputVector * avatarManager.speed * Time.fixedDeltaTime;
-        avatarManager.rb.MovePosition(new Vector2(this.transform.position.x, this.transform.position.y) + movementVector);
+        if (avatarManager.canMove)
+        {
+            Vector2 movementVector = InputVector * avatarManager.speed * Time.fixedDeltaTime;
+            avatarManager.rb.MovePosition(new Vector2(this.transform.position.x, this.transform.position.y) + movementVector);
+        }
     }
 }

@@ -8,11 +8,11 @@ public class AvatarAnimController : MonoBehaviour
     [SerializeField] Animator animator;
     void Update()
     {
-        if(avatarManager.dodge.Dodge)
+        if (avatarManager.isDodging)
         {
             animator.SetBool("Dodge", true);
         }
-        else if(avatarManager.movement.InputVector.magnitude > 0 && !avatarManager.dodge.Dodge)
+        else if (avatarManager.movement.InputVector.magnitude > 0 && !avatarManager.isDodging)
         {
             animator.SetBool("Move", true);
             animator.SetBool("Dodge", false);
