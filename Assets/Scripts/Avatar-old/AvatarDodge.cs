@@ -30,7 +30,6 @@ public class AvatarDodge : MonoBehaviour
                 avatarManager.canMoveWithInput = true;
                 avatarManager.isDodging = false;
                 avatarManager.AfterDodge();
-                Debug.Log("End of dodging with " + avatarManager.movement.InputVector);
             }
         }
     }
@@ -43,7 +42,6 @@ public class AvatarDodge : MonoBehaviour
         dodgeFrame = 0;
         StartCoroutine(StartDodgeCooldown());
         avatarManager.isDodging = true;
-        Debug.Log("is dodging with " + avatarManager.movement.InputVector);
     }
 
     private IEnumerator StartDodgeCooldown()

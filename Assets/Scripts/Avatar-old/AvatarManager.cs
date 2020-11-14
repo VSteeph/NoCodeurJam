@@ -39,6 +39,7 @@ public class AvatarManager : MonoBehaviour
     //Shooting
     [Header("Shooting")]
     public float shotCooldown = 0.5f;
+    public IBullet loadedBullet;
     public event System.Action onShot;
     public event System.Action afterShot;
 
