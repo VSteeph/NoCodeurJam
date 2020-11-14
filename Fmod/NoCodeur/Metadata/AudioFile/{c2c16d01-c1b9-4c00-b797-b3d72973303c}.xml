@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{c2c16d01-c1b9-4c00-b797-b3d72973303c}">
+		<property name="assetPath">
+			<value>Frénésie.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>96.888888888888886</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e34315e5-60e5-4adf-96fe-11f7df6c62d9}</destination>
+		</relationship>
+	</object>
+</objects>

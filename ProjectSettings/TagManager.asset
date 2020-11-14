@@ -13,13 +13,13 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - PlayerDodging
+  - Obstacles
+  - Void
+  - Bullet
+  - GroundedEnemies
+  - FlyingEnemies
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 1102753651
+    locked: 0
+  - name: Props
+    uniqueID: 1245350613
     locked: 0
   - name: Default
     uniqueID: 0
