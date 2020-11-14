@@ -3753,6 +3753,56 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &412158031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 412158033}
+  - component: {fileID: 412158032}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &412158032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412158031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3517f7f87685e459eabb2ffd059ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterManager: {fileID: 1915640559}
+  ShootEvent: event:/Avatar/Shoot
+  DodgeEvent: 
+  HitEvent: 
+  RobotIdle: 
+  RobotHit: 
+  RobotDeath: 
+--- !u!4 &412158033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412158031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.9165263, y: 1.9308844, z: 13.766264}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -7116,6 +7166,7 @@ MonoBehaviour:
   playerManager: {fileID: 1915640559}
   aim: {fileID: 1131819274}
   gunPivot: {fileID: 902785973}
+  gunVisual: {fileID: 0}
 --- !u!114 &902785975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7380,7 +7431,6 @@ GameObject:
   - component: {fileID: 1303613360}
   - component: {fileID: 1303613359}
   - component: {fileID: 1303613358}
-  - component: {fileID: 1303613365}
   m_Layer: 0
   m_Name: Mob (4)
   m_TagString: Untagged
@@ -7547,12 +7597,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1505508227 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6890157417674058512, guid: d2156cf919fc9db458db3f4cc22ecb02,
-    type: 3}
-  m_PrefabInstance: {fileID: 6890157417366721875}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1533314211
 GameObject:
   m_ObjectHideFlags: 0
@@ -8270,7 +8314,6 @@ GameObject:
   - component: {fileID: 1915640561}
   - component: {fileID: 1915640560}
   - component: {fileID: 1915640559}
-  - component: {fileID: 1915640558}
   - component: {fileID: 1915640557}
   - component: {fileID: 1915640556}
   - component: {fileID: 1915640562}
@@ -8288,7 +8331,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915640555}
+  m_GameObject: {fileID: 1898517225}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -8314,38 +8357,19 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1903310236}
-  - component: {fileID: 1903310235}
-  m_Layer: 0
-  m_Name: SoundManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1903310235
-
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915640555}
+  m_GameObject: {fileID: 1898517225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33fc577e9cdc4fa4c97e297dfc8914a7, type: 3}
-  m_Name: 
+  m_Script: {fileID: 0}
+  m_Name: SoundManager
   m_EditorClassIdentifier: 
-  characterManager: {fileID: 1915640559}
 --- !u!114 &1915640559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915640555}
+  m_GameObject: {fileID: 1898517225}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6409f8bc6111354fac054bf16984b22, type: 3}
@@ -8376,7 +8400,7 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915640555}
+  m_GameObject: {fileID: 1898517225}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -8396,7 +8420,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915640555}
+  m_GameObject: {fileID: 1898517225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.16, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -8412,7 +8436,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915640555}
+  m_GameObject: {fileID: 1898517225}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 757508f4a2ca15d4b8743ac371ef85b1, type: 3}
@@ -8425,7 +8449,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915640555}
+  m_GameObject: {fileID: 1898517225}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75661d604d4a57f4d9e7c9f789f58e16, type: 3}
@@ -14734,6 +14758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2017278399}
   - component: {fileID: 2017278398}
+  - component: {fileID: 2017278400}
   m_Layer: 0
   m_Name: Ambiance
   m_TagString: Untagged
@@ -14778,6 +14803,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2017278400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017278397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: "event:/Music/MusicFr\xE9n\xE9sie"
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &2084072158
 GameObject:
   m_ObjectHideFlags: 0
