@@ -12,6 +12,8 @@ public class MonsterManager : CharacterManager
     private void Start()
     {
         target = GameManager.Player.transform;
+        onShot += BlockMovement;
+        afterShot += AllowMovement;
     }
 
     void Update()
@@ -21,23 +23,30 @@ public class MonsterManager : CharacterManager
 
     private void FixedUpdate()
     {
-        if(direction.magnitude > 1)
+        if (direction.magnitude > range)
         {
-            if (isMoving)
-            {
-                OnMove();
-            }
-            else
+            if (!isMoving)
             {
                 isMoving = true;
                 StartMoving();
-                OnMove();
             }
+            OnMove();
+
         }
         else
         {
+            Debug.Log(gameObject + " is attacking");
             isMoving = false;
-            StopMoving();
+            OnShot();
         }
+    }
+
+    private void BlockMovement()
+    {
+        canMove = false;
+    }
+    private void AllowMovement()
+    {
+        canMove = true;
     }
 }

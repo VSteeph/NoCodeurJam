@@ -40,15 +40,11 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        var collisionManager = collision.GetComponent<CharacterManager>();
+        if(collisionManager != null)
+        {
+            collisionManager.OnHit();
+        }
         bullet.Impact();
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        bullet.Impact();
-    }
-
-
-
-
 }

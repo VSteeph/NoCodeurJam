@@ -58,4 +58,7 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-Assets/Scripts/Singleton/SoundManager.cs
+# Unity collab
+.collabignore
+fmod_editor.log
+

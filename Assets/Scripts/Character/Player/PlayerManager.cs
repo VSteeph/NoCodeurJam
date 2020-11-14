@@ -35,16 +35,12 @@ public class PlayerManager : CharacterManager
     {
         if (direction.magnitude > 0 && !isDodging)
         {
-            if(isMoving)
-            {
-                OnMove();
-            }
-            else
+            if (!isMoving)
             {
                 isMoving = true;
                 StartMoving();
-                OnMove();
             }
+            OnMove();
         }
         else
         {

@@ -10,23 +10,32 @@ public class ShotAbility : MonoBehaviour
 
     private float shotTimer = 0;
 
-    void Start()
+    protected virtual void Init()
     {
         if (characterManager == null)
             characterManager = this.GetComponent<CharacterManager>();
         characterManager.onShot += PerformShot;
     }
+    void Start()
+    {
+        Init();
+    }
 
-    private void PerformShot()
+    protected virtual void PrepareShot()
     {
         shotTimer = 0;
         StartCoroutine(StartShotCooldown());
+    }
+
+    private void PerformShot()
+    {
+        PrepareShot();
         var generatedProjectile = Instantiate(projectile, bulletSpawnPoint.position, Quaternion.identity);
         var projectileBrain = generatedProjectile.GetComponent<Projectile>();
         projectileBrain.InitializeProjectile(characterManager.loadedBullet, characterManager.GetAim());
     }
 
-    private IEnumerator StartShotCooldown()
+    protected IEnumerator StartShotCooldown()
     {
         while (shotTimer < characterManager.shotCooldown)
         {
@@ -36,6 +45,7 @@ public class ShotAbility : MonoBehaviour
         if (shotTimer > characterManager.shotCooldown)
         {
             Debug.Log("can shot again");
+            characterManager.AfterShot();
             characterManager.canShot = true;
         }
     }
