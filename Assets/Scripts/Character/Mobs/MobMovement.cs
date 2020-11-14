@@ -12,7 +12,6 @@ public class MobMovement : MonoBehaviour
 
     void Start()
     {
-        avatar = GameManager.avatarManager.transform;
         behavior = this.GetComponent<MobBehavior>();
     }
 

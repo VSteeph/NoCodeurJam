@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
-    public static AvatarManager avatarManager;
+    
+    [Header("Refs")]
     public static GameObject Player;
     public GameObject player;
 
@@ -13,4 +13,6 @@ public class GameManager : MonoBehaviour
     {
         Player = player;
     }
+
+    
 }
