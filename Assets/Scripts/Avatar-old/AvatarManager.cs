@@ -46,8 +46,6 @@ public class AvatarManager : MonoBehaviour
 
     void Awake()
     {
-        if (GameManager.avatarManager) Destroy(this.gameObject);
-        else GameManager.avatarManager = this;
         rb = this.GetComponent<Rigidbody2D>();
         canMove = true;
         canMoveWithInput = true;
