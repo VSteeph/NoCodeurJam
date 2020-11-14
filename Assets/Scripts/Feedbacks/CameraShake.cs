@@ -12,4 +12,10 @@ public class CameraShake : MonoBehaviour
         ImpulseSource = Source;
     }
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+            ImpulseSource.GenerateImpulse(2);
+    }
+
 }
