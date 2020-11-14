@@ -718,7 +718,6 @@ MonoBehaviour:
   characterManager: {fileID: 2111749776621728608}
   ShootEvent: event:/Avatar/Shoot
   DodgeEvent: 
-  HitEvent: 
+  HitEvent: event:/Avatar/Hit
   RobotIdle: 
-  RobotHit: 
-  RobotDeath: 
+  Death: 
