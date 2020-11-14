@@ -4,7 +4,7 @@ using UnityEngine;
 using FMODUnity;
 
 
-public class SoundSingleton : MonoBehaviour
+public class SoundManager : MonoBehaviour
 {
     [Header("Stats")]
     [SerializeField] CharacterManager characterManager;
