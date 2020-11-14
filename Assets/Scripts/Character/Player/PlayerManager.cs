@@ -67,7 +67,7 @@ public class PlayerManager : CharacterManager
             onDodge?.Invoke();
         }
 
-        if (Input.GetMouseButtonDown(0) && canShot)
+        if (Input.GetMouseButtonDown(0))
         {
             OnShot();
         }

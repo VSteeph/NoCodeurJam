@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 2111749776621728636}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
   canMove: 1
   canDodge: 1
   canShot: 1
-  shotCooldown: 0.5
+  shotCooldown: 0.1
   loadedBullet: {fileID: 2111749777760535096}
   canMoveWithInput: 1
   isDodging: 0
@@ -463,4 +463,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visual: {fileID: 21300000, guid: 14aa28b4384ed0f42bb95590f6be90f7, type: 3}
   bulletSpeed: 5
-  lifeDuration: 10
+  lifeDuration: 4

@@ -76,7 +76,12 @@ public class CharacterManager : MonoBehaviour
 
     public void OnShot()
     {
-        onShot?.Invoke();
+        if (canShot)
+        {
+            canShot = false;
+            onShot?.Invoke();
+        }
+
     }
 
     public void AfterShot()

@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    
-    public static AvatarManager avatarManager;
 
-    // Update is called once per frame
-    void Update()
+    public static AvatarManager avatarManager;
+    public static GameObject Player;
+    public GameObject player;
+
+    private void Awake()
     {
-        
+        Player = player;
     }
 }
