@@ -1,9 +1,3 @@
 # NoCodeurJam
 
-Jeu réalisé pendant la Game Jam de Perpignan du 13 au 15 novembre :
-- Finir Mecanique de shoot
-- Permettre de customiser les projectiles basé sur les inputs et créer plusieurs variantes de projectiles avec un type de projectile chargée
-- Créer un Prefab Player
-- Focus Feedback et LD
-
-push
+Jeu réalisé pendant la Game Jam de Perpignan du 13 au 15 novembre
