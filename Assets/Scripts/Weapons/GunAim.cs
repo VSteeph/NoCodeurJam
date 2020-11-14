@@ -20,7 +20,6 @@ public class GunAim : MonoBehaviour
         var angle = GetRadAngleBetweenGunAndPoint(playerManager.mousePosition);
         gunPivot.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        Debug.Log(gunPivot.rotation.z);
         if (gunPivot.rotation.z < -0.7 || gunPivot.rotation.z > 0.7)
         {
             gunVisual.localRotation = Quaternion.Euler(180, 0, 0);

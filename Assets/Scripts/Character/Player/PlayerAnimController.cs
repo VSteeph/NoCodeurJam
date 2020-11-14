@@ -9,6 +9,7 @@ public class PlayerAnimController : CharacterAnimController
 
     void Start()
     {
+        base.Init(); 
         playerManager.onDodge += StartDodging;
         playerManager.afterdodge += StopDodging;
     }

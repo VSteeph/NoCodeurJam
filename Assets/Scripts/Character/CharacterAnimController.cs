@@ -7,18 +7,23 @@ public class CharacterAnimController : MonoBehaviour
     [SerializeField] protected CharacterManager characterManager;
     [SerializeField] protected Animator animator;
 
-    private void Start()
+    protected virtual void Init()
     {
         characterManager.startMoving += StartMoving;
         characterManager.stopMoving += StopMoving;
     }
 
-    private void StartMoving()
+    private void Start()
+    {
+        Init();
+    }
+
+    protected void StartMoving()
     {
         animator.SetBool("Move", true);
     }
 
-    private void StopMoving()
+    protected void StopMoving()
     {
         animator.SetBool("Move", false);
     }

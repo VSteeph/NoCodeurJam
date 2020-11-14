@@ -42,6 +42,7 @@ public class PlayerManager : CharacterManager
             {
                 isMoving = true;
                 StartMoving();
+                OnMove();
             }
         }
         else
