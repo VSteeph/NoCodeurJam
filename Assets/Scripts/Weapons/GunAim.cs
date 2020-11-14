@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GunAim : MonoBehaviour
 {
-    [SerializeField] private AvatarManager avatarManager;
+    [SerializeField] private PlayerManager playerManager;
     public Transform aim;
-    public Transform gun;
+    public Transform gunPivot;
     private Plane plane;
 
     private void Start()
@@ -15,9 +15,9 @@ public class GunAim : MonoBehaviour
     }
     void Update()
     {
-        avatarManager.mousePosition = GetMouseImpact();
-        var angle = GetRadAngleBetweenGunAndPoint(avatarManager.mousePosition);
-        gun.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        playerManager.mousePosition = GetMouseImpact();
+        var angle = GetRadAngleBetweenGunAndPoint(playerManager.mousePosition);
+        gunPivot.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     private Vector3 GetMouseImpact()

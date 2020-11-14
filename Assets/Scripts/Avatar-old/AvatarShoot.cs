@@ -11,7 +11,6 @@ public class AvatarShoot : MonoBehaviour
     void Start()
     {
         avatarManager = this.GetComponent<AvatarManager>();
-
         avatarManager.onShot += PerformShot;
     }
 
@@ -21,8 +20,5 @@ public class AvatarShoot : MonoBehaviour
         var projectileSettings = generatedProjectile.GetComponent<Projectile>();
 
         projectileSettings.direction = avatarManager.mousePosition;
-
-        projectileSettings.StartProjectile();
-
     }
 }
