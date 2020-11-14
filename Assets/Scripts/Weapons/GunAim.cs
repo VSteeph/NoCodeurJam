@@ -8,6 +8,7 @@ public class GunAim : MonoBehaviour
     public Transform aim;
     public Transform gunPivot;
     private Plane plane;
+    [SerializeField] private Transform gunVisual;
 
     private void Start()
     {
@@ -18,6 +19,16 @@ public class GunAim : MonoBehaviour
         playerManager.mousePosition = GetMouseImpact();
         var angle = GetRadAngleBetweenGunAndPoint(playerManager.mousePosition);
         gunPivot.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        Debug.Log(gunPivot.rotation.z);
+        if (gunPivot.rotation.z < -0.7 || gunPivot.rotation.z > 0.7)
+        {
+            gunVisual.localRotation = Quaternion.Euler(180, 0, 0);
+        }
+        else
+        {
+            gunVisual.localRotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 
     private Vector3 GetMouseImpact()
