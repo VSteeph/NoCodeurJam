@@ -16,6 +16,7 @@ public class FeedbackManager : MonoBehaviour
     private Vector3 gunInitalLocalPosition;
     private int recoilPhase = 0;
     [SerializeField] private SpriteRenderer muzzleFlash;
+    [SerializeField] private Color muzzleColor;
     [SerializeField] private int muzzleFramesDuration;
     private int muzzleFramesCount;
 
@@ -74,19 +75,17 @@ public class FeedbackManager : MonoBehaviour
     private void MuzzleFlash()
     {
         muzzleFramesCount = 0;
-        muzzleFlash.color = new Color(1, 1, 1, 1);
+        muzzleFlash.color = muzzleColor;
         StartCoroutine(MuzzleFlashSpawn());
     }
     private IEnumerator MuzzleFlashSpawn()
     {
         while (muzzleFramesCount < muzzleFramesDuration)
         {
-            Debug.Log(muzzleFramesCount);
             muzzleFramesCount++;
             if (muzzleFramesCount == muzzleFramesDuration)
             {
-                Debug.Log("vanish");
-                muzzleFlash.color = new Color(1, 1, 1, 0);
+                muzzleFlash.color = new Color(muzzleColor.r, muzzleColor.g, muzzleColor.b, 0);
             }
             yield return null;
         }

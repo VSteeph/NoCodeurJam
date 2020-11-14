@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class MonsterManager : CharacterManager
 {
+    [Header("Monster Movement IA")]
     [SerializeField] protected MonsterBaseMovementLogic monsterMovement;
-    public Transform target;
-    public CharacterManager playerManager;
+
+    [Header("Attack stats")]
     public int range;
     public float attackTimer;
+
+    [HideInInspector] public Transform target;
+    [HideInInspector] public CharacterManager playerManager;
 
     private void Start()
     {
@@ -16,6 +20,7 @@ public class MonsterManager : CharacterManager
         onShot += BlockMovement;
         afterShot += AllowMovement;
         loadedBullet.range = range;
+        canMove = true;
     }
 
     void Update()
@@ -25,19 +30,20 @@ public class MonsterManager : CharacterManager
 
     private void FixedUpdate()
     {
+        Debug.Log(direction.magnitude);
         if (direction.magnitude > range)
         {
+            Debug.Log("Moving");
             if (!isMoving)
             {
                 isMoving = true;
                 StartMoving();
             }
             OnMove();
-
         }
         else
         {
-            Debug.Log(gameObject + " is attacking");
+            Debug.Log("Attacking");
             isMoving = false;
             OnShot();
         }
@@ -50,5 +56,10 @@ public class MonsterManager : CharacterManager
     private void AllowMovement()
     {
         canMove = true;
+    }
+
+    public override Vector3 GetAim()
+    {
+        return target.position;
     }
 }
