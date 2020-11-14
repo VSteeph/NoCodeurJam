@@ -28,6 +28,7 @@ public class PlayerManager : CharacterManager
     private void Update()
     {
         GetInput();
+        CameraShake.ImpulseSource.GenerateImpulse(5);
     }
 
     private void FixedUpdate()
