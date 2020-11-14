@@ -14157,10 +14157,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Avatar
       objectReference: {fileID: 0}
-    - target: {fileID: 6890157417848615468, guid: d2156cf919fc9db458db3f4cc22ecb02,
-        type: 3}
-      propertyPath: dodgeDurationInFrames
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2156cf919fc9db458db3f4cc22ecb02, type: 3}
