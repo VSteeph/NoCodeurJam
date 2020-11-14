@@ -12,6 +12,8 @@ public class CharacterManager : MonoBehaviour
 
     [Header("Stats")]
     public float speed = 10;
+    public int health = 100;
+    private int currentHealth;
     public float Energy = 100;
 
     // Character State
@@ -55,6 +57,8 @@ public class CharacterManager : MonoBehaviour
         canMove = true;
     }
 
+    #region event
+
     public void StartMoving()
     {
         startMoving?.Invoke();
@@ -80,8 +84,31 @@ public class CharacterManager : MonoBehaviour
         afterShot?.Invoke();
     }
 
+    public void OnHit()
+    {
+        onHit?.Invoke();
+        if (currentHealth < 1)
+            OnDeath();
+    }
+
+    public void OnSpawn()
+    {
+        onSpawn?.Invoke();
+    }
+
+    public void OnDeath()
+    {
+        onDeath?.Invoke();
+        Destroy(gameObject);
+    }
+
+
+    #endregion
+
+    #region Getters
     public virtual Vector3 GetAim()
     {
         return Vector3.zero;
     }
+    #endregion
 }

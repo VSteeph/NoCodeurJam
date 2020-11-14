@@ -12,7 +12,6 @@ public class RegularBullet : BaseBullet
 
     public override void Impact()
     {
-        Debug.Log("Impact");
-        Destroy(gameObject);
+        Debug.Log("Impact Effect");
     }
 }

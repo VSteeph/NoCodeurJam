@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2111749775837894789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Aim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2111749775971233067}
   - component: {fileID: 2111749775971233066}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 2111749776621728611}
   - component: {fileID: 2111749776621728637}
   - component: {fileID: 2111749776621728636}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,6 +187,7 @@ MonoBehaviour:
   rb: {fileID: 2111749776621728639}
   col: {fileID: 2111749776621728611}
   speed: 10
+  health: 100
   Energy: 100
   isInvulnerable: 0
   isMoving: 0
@@ -293,7 +294,7 @@ GameObject:
   - component: {fileID: 2111749777664112594}
   - component: {fileID: 2111749777664112592}
   - component: {fileID: 2111749777664112593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +410,7 @@ GameObject:
   - component: {fileID: 2111749777760535098}
   - component: {fileID: 2111749777760535097}
   - component: {fileID: 2111749777760535096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,4 +462,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visual: {fileID: 21300000, guid: 14aa28b4384ed0f42bb95590f6be90f7, type: 3}
-  bulletSpeed: 15
+  bulletSpeed: 5
+  lifeDuration: 10
