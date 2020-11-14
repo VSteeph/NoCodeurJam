@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1673556351}
   - component: {fileID: 1673556352}
+  - component: {fileID: 2106619485}
   m_Layer: 8
   m_Name: Feedback
   m_TagString: Untagged
@@ -50,6 +51,24 @@ MonoBehaviour:
   gunRecoilSeedCoeff: 10
   muzzleFlash: {fileID: 1884807999}
   muzzleFramesDuration: 20
+--- !u!114 &2106619485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673556350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f251dd7bc0c2a4c91f68c562e1d6bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cartouche: {fileID: 3213552163303877084, guid: b0acfc2174fbf874f9f07cc4c2a5d279,
+    type: 3}
+  aim: {fileID: 2111749777760535097}
+  characterManager: {fileID: 2111749776621728608}
+  cartoucheTravelCoeff: 4
+  bulletSpawnPoint: {fileID: 2111749775971233067}
 --- !u!1 &1784733225
 GameObject:
   m_ObjectHideFlags: 0
