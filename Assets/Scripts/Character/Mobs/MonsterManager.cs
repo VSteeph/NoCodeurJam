@@ -6,7 +6,8 @@ public class MonsterManager : CharacterManager
 {
     [SerializeField] protected MonsterBaseMovementLogic monsterMovement;
     public Transform target;
-    public float range;
+    public CharacterManager playerManager;
+    public int range;
     public float attackTimer;
 
     private void Start()
@@ -14,6 +15,7 @@ public class MonsterManager : CharacterManager
         target = GameManager.Player.transform;
         onShot += BlockMovement;
         afterShot += AllowMovement;
+        loadedBullet.range = range;
     }
 
     void Update()

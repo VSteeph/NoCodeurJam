@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ShotAbility : MonoBehaviour
 {
-    [SerializeField] private Transform bulletSpawnPoint;
+    [SerializeField] protected Transform bulletSpawnPoint;
     [SerializeField] private GameObject projectile;
-    [SerializeField] private CharacterManager characterManager;
+    [SerializeField] protected CharacterManager characterManager;
 
     private float shotTimer = 0;
 
@@ -14,11 +14,11 @@ public class ShotAbility : MonoBehaviour
     {
         if (characterManager == null)
             characterManager = this.GetComponent<CharacterManager>();
-        characterManager.onShot += PerformShot;
     }
     void Start()
     {
         Init();
+        characterManager.onShot += PerformShot;
     }
 
     protected virtual void PrepareShot()
@@ -44,7 +44,6 @@ public class ShotAbility : MonoBehaviour
         }
         if (shotTimer > characterManager.shotCooldown)
         {
-            Debug.Log("can shot again");
             characterManager.AfterShot();
             characterManager.canShot = true;
         }

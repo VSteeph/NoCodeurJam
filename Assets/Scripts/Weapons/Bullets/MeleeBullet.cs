@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class RegularBullet : BaseBullet
+public class MeleeBullet : BaseBullet
 {
     public override Vector2 GetBulletDistanceTraveled(Vector3 direction)
     {
-        return (new Vector2(direction.x, direction.y) * speed * Time.fixedDeltaTime);
+        return Vector2.zero;
     }
 
     public override void Impact()

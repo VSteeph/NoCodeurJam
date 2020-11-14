@@ -43,7 +43,7 @@ public class Projectile : MonoBehaviour
         var collisionManager = collision.GetComponent<CharacterManager>();
         if(collisionManager != null)
         {
-            collisionManager.OnHit();
+            collisionManager.OnHit(bullet.damage);
         }
         bullet.Impact();
     }

@@ -13,7 +13,7 @@ public class CharacterManager : MonoBehaviour
     [Header("Stats")]
     public float speed = 10;
     public int health = 100;
-    private int currentHealth;
+    public int currentHealth;
     public float Energy = 100;
 
     // Character State
@@ -55,6 +55,7 @@ public class CharacterManager : MonoBehaviour
     protected virtual void Init()
     {
         canMove = true;
+        currentHealth = health;
     }
 
     #region event
@@ -89,9 +90,10 @@ public class CharacterManager : MonoBehaviour
         afterShot?.Invoke();
     }
 
-    public void OnHit()
+    public void OnHit(int damage)
     {
         onHit?.Invoke();
+        currentHealth -= damage ;
         if (currentHealth < 1)
             OnDeath();
     }

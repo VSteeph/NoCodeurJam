@@ -5,7 +5,9 @@ using UnityEngine;
 public abstract class BaseBullet : MonoBehaviour
 {
     [SerializeField] protected Sprite visual;
-    [SerializeField] protected float bulletSpeed;
+    [SerializeField] protected float speed;
+    [SerializeField] public int damage;
+    [SerializeField] public int range;
     [SerializeField] protected float lifeDuration;
 
     public virtual Sprite GetSprite()

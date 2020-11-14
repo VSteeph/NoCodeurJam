@@ -6635,6 +6635,36 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 3.2
+--- !u!1 &650839948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 650839949}
+  m_Layer: 13
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &650839949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650839948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 843847272}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &657151218
 GameObject:
   m_ObjectHideFlags: 0
@@ -6927,6 +6957,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &843847271 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5275338560578991515, guid: 299da04c37839a548a3538ac1d6cdbb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 5275338560559679278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &843847272 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5275338560578991512, guid: 299da04c37839a548a3538ac1d6cdbb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 5275338560559679278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &843847273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843847271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf0da3ca40bc5f4c86649201d2ef062, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visual: {fileID: 0}
+  speed: 0
+  damage: 1
+  range: 4
+  lifeDuration: 0
 --- !u!1 &862085971
 GameObject:
   m_ObjectHideFlags: 0
@@ -14524,6 +14583,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2111749775971233067, guid: e0d575cbd01c3994c9a23f7dcb78a1d2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2111749776621728608, guid: e0d575cbd01c3994c9a23f7dcb78a1d2,
+        type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2111749776621728612, guid: e0d575cbd01c3994c9a23f7dcb78a1d2,
         type: 3}
       propertyPath: m_Name
@@ -14584,6 +14653,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2111749777760535096, guid: e0d575cbd01c3994c9a23f7dcb78a1d2,
+        type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2111749777760535096, guid: e0d575cbd01c3994c9a23f7dcb78a1d2,
+        type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0d575cbd01c3994c9a23f7dcb78a1d2, type: 3}
 --- !u!1001 &5275338560559679278
@@ -14593,6 +14672,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4293628882985530552, guid: 299da04c37839a548a3538ac1d6cdbb1,
+        type: 3}
+      propertyPath: bulletSpawnPoint
+      value: 
+      objectReference: {fileID: 650839949}
     - target: {fileID: 5275338560763824484, guid: 299da04c37839a548a3538ac1d6cdbb1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14648,6 +14732,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5275338560763824485, guid: 299da04c37839a548a3538ac1d6cdbb1,
+        type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275338560763824485, guid: 299da04c37839a548a3538ac1d6cdbb1,
+        type: 3}
+      propertyPath: loadedBullet
+      value: 
+      objectReference: {fileID: 843847273}
     - target: {fileID: 5275338560763824487, guid: 299da04c37839a548a3538ac1d6cdbb1,
         type: 3}
       propertyPath: m_GravityScale
