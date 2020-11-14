@@ -10,16 +10,18 @@ public class Projectile : MonoBehaviour
     private SpriteRenderer visualBullet;
     private Rigidbody2D rb;
     private bool isReady = false;
+    public string senderTag;
 
     private float lifeDuration = 0f;
 
-    public void InitializeProjectile(BaseBullet loadedBullet, Vector3 bulletDirection)
+    public void InitializeProjectile(BaseBullet loadedBullet, string tag, Vector3 bulletDirection)
     {
         bullet = loadedBullet;
         rb = GetComponent<Rigidbody2D>();
         visualBullet = GetComponent<SpriteRenderer>();
         visualBullet.sprite = bullet.GetSprite();
         direction = Vector3.Normalize(bulletDirection - transform.position);
+        senderTag = tag;
         isReady = true;
     }
 
@@ -40,11 +42,18 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var collisionManager = collision.GetComponent<CharacterManager>();
-        if(collisionManager != null)
+        if (senderTag == collision.tag)
+            return;
+        else
         {
-            collisionManager.OnHit(bullet.damage);
+            var collisionManager = collision.GetComponent<CharacterManager>();
+            if (collisionManager != null)
+            {
+                collisionManager.OnHit(bullet.damage, transform.position);
+            }
+            bullet.Impact();
+            Destroy(gameObject);
         }
-        bullet.Impact();
+
     }
 }

@@ -32,7 +32,7 @@ public class ShotAbility : MonoBehaviour
         PrepareShot();
         var generatedProjectile = Instantiate(projectile, bulletSpawnPoint.position, Quaternion.identity);
         var projectileBrain = generatedProjectile.GetComponent<Projectile>();
-        projectileBrain.InitializeProjectile(characterManager.loadedBullet, characterManager.GetAim());
+        projectileBrain.InitializeProjectile(characterManager.loadedBullet, gameObject.tag, characterManager.GetAim());
     }
 
     protected IEnumerator StartShotCooldown()

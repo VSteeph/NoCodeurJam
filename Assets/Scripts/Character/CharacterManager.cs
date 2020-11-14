@@ -33,6 +33,9 @@ public class CharacterManager : MonoBehaviour
     public event System.Action startMoving;
     public event System.Action onMove;
     public event System.Action stopMoving;
+    public float pushBackOnHit;
+    public int framesToStopPushBack = 20;
+    private int pushbackFrames = 0;
 
 
 
@@ -56,6 +59,26 @@ public class CharacterManager : MonoBehaviour
     {
         canMove = true;
         currentHealth = health;
+    }
+
+    protected virtual void ResetPushback()
+    {
+        pushbackFrames = 0;
+        StartCoroutine(ResetVelocity());
+    }
+
+    protected IEnumerator ResetVelocity()
+    {
+        while(pushbackFrames < framesToStopPushBack)
+        {
+            pushbackFrames++;
+            if(pushbackFrames == framesToStopPushBack)
+            {
+                rb.velocity = Vector2.zero;
+                canMove = true;
+            }
+            yield return null;
+        }
     }
 
     #region event
@@ -90,8 +113,15 @@ public class CharacterManager : MonoBehaviour
         afterShot?.Invoke();
     }
 
-    public void OnHit(int damage)
+    public virtual void OnHit(int damage, Vector3? explosionPoint = null)
     {
+        if(explosionPoint != null)
+        {
+            canMove = false;
+            var pushbackDirection = Vector3.Normalize(transform.position - (Vector3)explosionPoint);
+            rb.AddForce(pushbackDirection * pushBackOnHit, ForceMode2D.Impulse);
+            ResetPushback();
+        }
         onHit?.Invoke();
         currentHealth -= damage ;
         if (currentHealth < 1)
@@ -103,10 +133,9 @@ public class CharacterManager : MonoBehaviour
         onSpawn?.Invoke();
     }
 
-    public void OnDeath()
+    public virtual void OnDeath()
     {
         onDeath?.Invoke();
-        Destroy(gameObject);
     }
 
 

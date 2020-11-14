@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7474622844706473473}
   m_Layer: 0
   m_Name: RangedMobChampignon
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
   rb: {fileID: 7474622844706473482}
   col: {fileID: 7474622844706473487}
   speed: 10
-  health: 100
+  health: 5
   currentHealth: 0
   Energy: 100
   isInvulnerable: 0
@@ -63,6 +63,8 @@ MonoBehaviour:
   canMove: 1
   canDodge: 1
   canShot: 1
+  pushBackOnHit: 24
+  framesToStopPushBack: 35
   shotCooldown: 0.5
   loadedBullet: {fileID: 7474622846186021690}
   monsterMovement: {fileID: 7474622844706473484}
@@ -169,6 +171,7 @@ GameObject:
   - component: {fileID: 7474622845043202638}
   - component: {fileID: 7474622845043202625}
   - component: {fileID: 7474622845043202624}
+  - component: {fileID: 103052666}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -260,6 +263,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &103052666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7474622845043202639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3517f7f87685e459eabb2ffd059ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterManager: {fileID: 7474622844706473483}
+  ShootEvent: 
+  DodgeEvent: 
+  HitEvent: 
+  RobotIdle: 
+  RobotHit: 
+  RobotDeath: 
 --- !u!1 &7474622845538374912
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7474622845647138205}
   - component: {fileID: 7474622845647138204}
+  - component: {fileID: 707035812}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -344,6 +367,25 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 3.2
+--- !u!114 &707035812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7474622845647138202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3517f7f87685e459eabb2ffd059ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterManager: {fileID: 7474622844706473483}
+  ShootEvent: 
+  DodgeEvent: 
+  HitEvent: event:/Ennemies/RobotHit
+  RobotIdle: 
+  RobotHit: 
+  RobotDeath: 
 --- !u!1 &7474622846186021688
 GameObject:
   m_ObjectHideFlags: 0
