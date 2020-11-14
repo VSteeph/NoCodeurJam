@@ -13,13 +13,13 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - PlayerDodging
+  - Obstacles
+  - Void
+  - Bullet
+  - GroundedEnemies
+  - FlyingEnemies
   - 
   - 
   - 
