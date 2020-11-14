@@ -11,6 +11,8 @@ public class Projectile : MonoBehaviour
     private Rigidbody2D rb;
     private bool isReady = false;
 
+    private float lifeDuration = 0f;
+
     public void InitializeProjectile(BaseBullet loadedBullet, Vector3 bulletDirection)
     {
         bullet = loadedBullet;
@@ -21,6 +23,12 @@ public class Projectile : MonoBehaviour
         isReady = true;
     }
 
+    private void Update()
+    {
+        lifeDuration += Time.deltaTime;
+        if (!bullet.isAlive(lifeDuration))
+            Destroy(gameObject);
+    }
     private void FixedUpdate()
     {
         if (isReady)
