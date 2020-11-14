@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{a832dad6-ffd1-4d76-8c9d-280615b82da7}">
+		<property name="assetPath">
+			<value>sfx_sounds_negative1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.4469160997732426</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e34315e5-60e5-4adf-96fe-11f7df6c62d9}</destination>
+		</relationship>
+	</object>
+</objects>
