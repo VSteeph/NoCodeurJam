@@ -388,7 +388,7 @@ MonoBehaviour:
   rb: {fileID: 2111749776621728639}
   col: {fileID: 2111749776621728611}
   speed: 10
-  health: 500
+  health: 5
   currentHealth: 0
   Energy: 100
   isInvulnerable: 0
