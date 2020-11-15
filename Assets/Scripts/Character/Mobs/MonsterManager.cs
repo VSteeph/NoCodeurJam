@@ -10,6 +10,8 @@ public class MonsterManager : CharacterManager
     [Header("Attack stats")]
     public int range;
     public float attackTimer;
+    public float rangeDetection;
+
     [Header("Refs")]
     public RobotManager robotManager;
     [HideInInspector] public Transform target;
@@ -31,19 +33,29 @@ public class MonsterManager : CharacterManager
 
     private void FixedUpdate()
     {
-        if (direction.magnitude > range)
+        if(direction.magnitude < rangeDetection)
         {
-            if (!isMoving)
+            Debug.Log("PLAYER DETECTED");
+            if (direction.magnitude > range)
             {
-                isMoving = true;
-                StartMoving();
+                if (!isMoving)
+                {
+                    isMoving = true;
+                    StartMoving();
+                }
+                OnMove();
             }
-            OnMove();
+            else
+            {
+                isMoving = false;
+                OnShot();
+            }
         }
         else
         {
+            Debug.Log("PLAYER UNDETECTED");
             isMoving = false;
-            OnShot();
+            StopMoving();
         }
     }
 

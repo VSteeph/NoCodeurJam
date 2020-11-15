@@ -71,6 +71,7 @@ MonoBehaviour:
   monsterMovement: {fileID: 7474622844706473484}
   range: 3
   attackTimer: 0
+  rangeDetection: 6
   robotManager: {fileID: 0}
   target: {fileID: 0}
   playerManager: {fileID: 0}
