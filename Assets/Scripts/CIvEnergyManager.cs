@@ -88,17 +88,16 @@ public class CIvEnergyManager : MonoBehaviour
             OnLoss.Invoke();
             CaravanPerished();
         }
-        if(CIvEnergyManager.TotalEnergy <= 100 && !once && !MainMenu)
+        if(!once && !MainMenu)
         {
             StartPopulationLoss();
             once = true;
         }
-        if(CIvEnergyManager.TotalEnergy >= 100) once = false;
     }
 
     public void StartPopulationLoss()
     {
-        if(CIvEnergyManager.TotalEnergy < 100 && CIvEnergyManager.TotalEnergy >= 40)
+        if(CIvEnergyManager.TotalEnergy >= 40)
         {
             CivilisationPopulation -= 1;
             Invoke("StartPopulationLoss",5);
@@ -152,12 +151,14 @@ public class CIvEnergyManager : MonoBehaviour
     public void CaravanPerished()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(10);
+        Reset();
         Lost = true;
     }
 
     public void PlayerPerished()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(11);
+        CivilisationPopulation -= 10;
         Lost = true;
     }
 
