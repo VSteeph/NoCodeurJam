@@ -9,7 +9,7 @@ public class MeleeBullet : BaseBullet
         return Vector2.zero;
     }
 
-    public override void Impact()
+    public override void Impact(Animator anim = null)
     {
         Debug.Log("Impact Effect");
     }

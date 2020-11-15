@@ -151,8 +151,7 @@ MonoBehaviour:
   DodgeEvent: 
   HitEvent: event:/Ennemies/RobotHit
   RobotIdle: 
-  RobotHit: 
-  RobotDeath: 
+  Death: 
 --- !u!1 &5275338560763824488
 GameObject:
   m_ObjectHideFlags: 0

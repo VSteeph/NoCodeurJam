@@ -43,6 +43,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 226000
+--- !u!114 &-7895890020334264830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Click
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Click
+  guid: e8831f42d7fc4c489d63c2892f762ee7
+  Banks:
+  - {fileID: 1467304465569869538}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 548
 --- !u!114 &-3621159641676358802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +135,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 96888
+--- !u!114 &-118445689058535281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Avatar/PickUP
+  m_EditorClassIdentifier: 
+  Path: event:/Avatar/PickUP
+  guid: 49a2cce949124d41a071c9e262f2c878
+  Banks:
+  - {fileID: 1467304465569869538}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-58710686598616705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,13 +174,13 @@ MonoBehaviour:
   guid: 60bd85de23f36f4c8a192178bdd8b2fc
   Banks:
   - {fileID: 1467304465569869538}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 348000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,13 +206,17 @@ MonoBehaviour:
   - {fileID: 2972871048963853110}
   - {fileID: 8711397214519620351}
   - {fileID: -766956017722321945}
+  - {fileID: 1919759773610097944}
+  - {fileID: 602237133745821084}
+  - {fileID: -7895890020334264830}
+  - {fileID: -118445689058535281}
   EditorParameters:
   - {fileID: -8982167313712840208}
   MasterBanks:
   - {fileID: 1467304465569869538}
   StringsBanks:
   - {fileID: 4990567059799733041}
-  stringsBankWriteTime: 637409699712543904
+  stringsBankWriteTime: 637410303532582638
   cacheVersion: 6
 --- !u!114 &396508449139150046
 MonoBehaviour:
@@ -191,6 +241,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &602237133745821084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Hover
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Hover
+  guid: 6f7f8192316db1429bd62f04927e5764
+  Banks:
+  - {fileID: 1467304465569869538}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 60
 --- !u!114 &1467304465569869538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,10 +279,33 @@ MonoBehaviour:
   Path: Fmod/NoCodeur/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637409699712484083
+  lastModified: 637410303532502821
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &1919759773610097944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MusicThoughts
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MusicThoughts
+  guid: 0351a72948412344b14ccd55b0b516ba
+  Banks:
+  - {fileID: 1467304465569869538}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 57266
 --- !u!114 &2972871048963853110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,11 +344,11 @@ MonoBehaviour:
   Path: Fmod/NoCodeur/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637409699712543904
+  lastModified: 637410303532582638
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1202
+    Value: 1376
   Exists: 1
 --- !u!114 &7624463423164986797
 MonoBehaviour:

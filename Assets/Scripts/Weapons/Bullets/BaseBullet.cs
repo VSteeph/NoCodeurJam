@@ -4,13 +4,13 @@ using UnityEngine;
 
 public abstract class BaseBullet : MonoBehaviour
 {
-    [SerializeField] protected Sprite visual;
+    [SerializeField] protected RuntimeAnimatorController visual;
     [SerializeField] protected float speed;
     [SerializeField] public int damage;
     [SerializeField] public int range;
     [SerializeField] protected float lifeDuration;
 
-    public virtual Sprite GetSprite()
+    public virtual RuntimeAnimatorController GetSprite()
     {
         return visual;
     }
@@ -29,6 +29,6 @@ public abstract class BaseBullet : MonoBehaviour
 
     public abstract Vector2 GetBulletDistanceTraveled(Vector3 direction);
 
-    public abstract void Impact();
+    public abstract void Impact(Animator anim = null);
 
 }

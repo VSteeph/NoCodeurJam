@@ -7,18 +7,21 @@ public class CIvEnergyManager : MonoBehaviour
     [Header("Event")]
     public UnityEngine.Events.UnityEvent OnLoss;
     public static int TotalEnergy;
+    public int EnergyStartAmount;
     public int CivilisationPopulation;
     private bool once = false;
     public static CIvEnergyManager cIvEnergyManager;
     public int CompletedLevels;
-
+    private bool MainMenu;
     void Awake()
     {
+        MainMenu = true;
         if(CIvEnergyManager.cIvEnergyManager != null) Destroy(this.gameObject);
         else
         {
             DontDestroyOnLoad(this.gameObject);
             CIvEnergyManager.cIvEnergyManager = this;
+            TotalEnergy += EnergyStartAmount;
         }
     }
 
@@ -38,10 +41,12 @@ public class CIvEnergyManager : MonoBehaviour
         {
             OnLoss.Invoke();
         }
-        if(CIvEnergyManager.TotalEnergy <= 50 && !once)
+        if(CIvEnergyManager.TotalEnergy <= 50 && !once && !MainMenu)
         {
             StartPopulationLoss();
+            once = true;
         }
+        if(CIvEnergyManager.TotalEnergy > 50) once = false;
     }
 
     public void StartPopulationLoss()
@@ -81,10 +86,14 @@ public class CIvEnergyManager : MonoBehaviour
     public void LoadNextLevel()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(CompletedLevels+1);
+        MainMenu = false;
     }
 
     public void BackToChoiceMenu()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        MainMenu =true;
     }
+
+    
 }

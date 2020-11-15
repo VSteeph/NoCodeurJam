@@ -164,10 +164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd308d9d9b8d564290fd32299a8461a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnLoss:
-    m_PersistentCalls:
-      m_Calls: []
-  CivilisationPopulation: 0
   player: {fileID: 0}
 --- !u!1 &86542248 stripped
 GameObject:
@@ -1004,7 +1000,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -4002,8 +3998,7 @@ MonoBehaviour:
   DodgeEvent: 
   HitEvent: 
   RobotIdle: 
-  RobotHit: 
-  RobotDeath: 
+  Death: 
 --- !u!4 &412158033
 Transform:
   m_ObjectHideFlags: 0
@@ -6797,6 +6792,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &595556935
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4306524431173106792, guid: 0a8a1bf9b23b2244c892e072aed1d0ab,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306524431173106792, guid: 0a8a1bf9b23b2244c892e072aed1d0ab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306524431173106792, guid: 0a8a1bf9b23b2244c892e072aed1d0ab,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306524431173106792, guid: 0a8a1bf9b23b2244c892e072aed1d0ab,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306524431173106792, guid: 0a8a1bf9b23b2244c892e072aed1d0ab,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306524431173106792, guid: 0a8a1bf9b23b2244c892e072aed1d0ab,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306524431173106792, guid: 0a8a1bf9b23b2244c892e072aed1d0ab,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306524431173106792, guid: 0a8a1bf9b23b2244c892e072aed1d0ab,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306524431173106792, guid: 0a8a1bf9b23b2244c892e072aed1d0ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306524431173106792, guid: 0a8a1bf9b23b2244c892e072aed1d0ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306524431173106792, guid: 0a8a1bf9b23b2244c892e072aed1d0ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306524431173106794, guid: 0a8a1bf9b23b2244c892e072aed1d0ab,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerBullet
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a8a1bf9b23b2244c892e072aed1d0ab, type: 3}
 --- !u!1 &597173987
 GameObject:
   m_ObjectHideFlags: 0
@@ -7401,7 +7465,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -8464,7 +8528,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -9352,10 +9416,13 @@ MonoBehaviour:
   canMove: 1
   canDodge: 1
   canShot: 1
+  pushBackOnHit: 0
+  framesToStopPushBack: 20
   shotCooldown: 0.5
   loadedBullet: {fileID: 902785975}
   canMoveWithInput: 1
   isDodging: 0
+  invulnerabilityFramesAfterHit: 50
   dodgeCooldown: 2
   dodgeDurationInFrames: 20
   dodgeForce: 1.5
@@ -9619,7 +9686,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -16201,7 +16268,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2

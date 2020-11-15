@@ -280,8 +280,7 @@ MonoBehaviour:
   DodgeEvent: 
   HitEvent: 
   RobotIdle: 
-  RobotHit: 
-  RobotDeath: 
+  Death: 
 --- !u!1 &7474622845538374912
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,8 +383,7 @@ MonoBehaviour:
   DodgeEvent: 
   HitEvent: event:/Ennemies/RobotHit
   RobotIdle: 
-  RobotHit: 
-  RobotDeath: 
+  Death: 
 --- !u!1 &7474622846186021688
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b1f62203c14fb942a84f504d3903fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visual: {fileID: 21300000, guid: c0c185ccfdf33934392dc07cebd22e63, type: 3}
+  visual: {fileID: 22100000, guid: e9cfcce1655c4384b9be2d03c9089c11, type: 2}
   speed: 5
   damage: 1
   range: 0
