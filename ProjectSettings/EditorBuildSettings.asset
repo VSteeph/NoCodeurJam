@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LvL9.unity
     guid: 345f1be008932814a8583b1647add063
+  - enabled: 1
+    path: Assets/Scenes/DeathSceneCaravan.unity
+    guid: e66a0331c42b3ff42ab7f6e7e89018b8
+  - enabled: 1
+    path: Assets/Scenes/DeathSceneHP.unity
+    guid: 70ff6a4694e4f1e4ca7dd6f4f8382356
   m_configObjects: {}

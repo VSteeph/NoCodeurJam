@@ -310,6 +310,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   EnergyStartAmount: 190
+  CivStartAmount: 150
   CivilisationPopulation: 150
   CompletedLevels: 0
   speedPlayer: 0

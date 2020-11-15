@@ -387,7 +387,7 @@ MonoBehaviour:
   invFrames: {fileID: 2111749776621728610}
   rb: {fileID: 2111749776621728639}
   col: {fileID: 2111749776621728611}
-  speed: 10
+  speed: 6
   health: 5
   currentHealth: 0
   Energy: 100
@@ -396,14 +396,14 @@ MonoBehaviour:
   canMove: 1
   canDodge: 1
   canShot: 1
-  pushBackOnHit: 19
+  pushBackOnHit: 5
   framesToStopPushBack: 35
-  shotCooldown: 0.1
+  shotCooldown: 1
   loadedBullet: {fileID: 2111749777760535096}
   canMoveWithInput: 1
   isDodging: 0
   invulnerabilityFramesAfterHit: 35
-  dodgeCooldown: 1
+  dodgeCooldown: 3
   dodgeDurationInFrames: 10
   dodgeForce: 1.5
   mousePosition: {x: 0, y: 0, z: 0}
@@ -669,7 +669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visual: {fileID: 22100000, guid: e9cfcce1655c4384b9be2d03c9089c11, type: 2}
   speed: 8
-  damage: 2
+  damage: 10
   range: 0
   lifeDuration: 4
 --- !u!1 &7129351925663558082
