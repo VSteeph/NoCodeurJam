@@ -33,7 +33,7 @@ public class ShootFeedback : FeedbackManager
 
     private void SmallCameraShake()
     {
-        CameraShake.ImpulseSource.GenerateImpulse(1);
+        CameraShake.ImpulseSource.GenerateImpulse(1.5f);
     }
 
     private void ShakeWeapon()

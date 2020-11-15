@@ -55,7 +55,7 @@ MonoBehaviour:
   invFrames: {fileID: 0}
   rb: {fileID: 7474622844706473482}
   col: {fileID: 7474622844706473487}
-  speed: 7
+  speed: 4
   health: 60
   currentHealth: 0
   Energy: 100
