@@ -7,6 +7,7 @@ public class CIvEnergyManager : MonoBehaviour
     [Header("Event")]
     public UnityEngine.Events.UnityEvent OnLoss;
     public static int TotalEnergy;
+    public int EnergyStartAmount;
     public int CivilisationPopulation;
     private bool once = false;
     public static CIvEnergyManager cIvEnergyManager;
@@ -19,6 +20,7 @@ public class CIvEnergyManager : MonoBehaviour
         {
             DontDestroyOnLoad(this.gameObject);
             CIvEnergyManager.cIvEnergyManager = this;
+            TotalEnergy += EnergyStartAmount;
         }
     }
 
@@ -41,7 +43,9 @@ public class CIvEnergyManager : MonoBehaviour
         if(CIvEnergyManager.TotalEnergy <= 50 && !once)
         {
             StartPopulationLoss();
+            once = true;
         }
+        if(CIvEnergyManager.TotalEnergy > 50) once = false;
     }
 
     public void StartPopulationLoss()
