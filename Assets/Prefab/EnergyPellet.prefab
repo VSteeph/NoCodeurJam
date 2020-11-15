@@ -121,7 +121,7 @@ MonoBehaviour:
   AimDir: {x: 1, y: 0}
   force: 0
   Energy: 1
-  EnergyAmount: 5
+  EnergyAmount: 10
 --- !u!61 &8985756767213910181
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -374,9 +374,9 @@ MonoBehaviour:
   damageBullet: 0
   damageBulletIncrease: 2
   shootCooldown: 0
-  shootCooldownIncrease: 1
+  shootCooldownIncrease: -0.1
   dodgeCooldown: 0
-  dodgeCooldownIncrease: 1
+  dodgeCooldownIncrease: -1
   dodgeDuration: 0
   dodgeDurationIncrease: 3
   pushBackOnHit: 0

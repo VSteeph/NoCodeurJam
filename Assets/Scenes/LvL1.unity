@@ -128,6 +128,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2111749776621728608, guid: e0d575cbd01c3994c9a23f7dcb78a1d2,
+        type: 3}
+      propertyPath: shotCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2111749776621728612, guid: e0d575cbd01c3994c9a23f7dcb78a1d2,
         type: 3}
       propertyPath: m_Name
@@ -11309,6 +11314,75 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1001 &1291147757
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 487215212}
+    m_Modifications:
+    - target: {fileID: 5275338560763824484, guid: 299da04c37839a548a3538ac1d6cdbb1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275338560763824484, guid: 299da04c37839a548a3538ac1d6cdbb1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275338560763824484, guid: 299da04c37839a548a3538ac1d6cdbb1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.23113605
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275338560763824484, guid: 299da04c37839a548a3538ac1d6cdbb1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275338560763824484, guid: 299da04c37839a548a3538ac1d6cdbb1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275338560763824484, guid: 299da04c37839a548a3538ac1d6cdbb1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275338560763824484, guid: 299da04c37839a548a3538ac1d6cdbb1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275338560763824484, guid: 299da04c37839a548a3538ac1d6cdbb1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275338560763824484, guid: 299da04c37839a548a3538ac1d6cdbb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275338560763824484, guid: 299da04c37839a548a3538ac1d6cdbb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275338560763824484, guid: 299da04c37839a548a3538ac1d6cdbb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275338560763824488, guid: 299da04c37839a548a3538ac1d6cdbb1,
+        type: 3}
+      propertyPath: m_Name
+      value: MobChampignon (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 299da04c37839a548a3538ac1d6cdbb1, type: 3}
 --- !u!1 &1941173169
 GameObject:
   m_ObjectHideFlags: 0
