@@ -19,6 +19,7 @@ public class MonsterManager : CharacterManager
         onShot += BlockMovement;
         afterShot += AllowMovement;
         loadedBullet.range = range;
+        target = GameManager.Player.transform;
         canMove = true;
     }
 

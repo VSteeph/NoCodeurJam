@@ -7,7 +7,7 @@ public class Projectile : MonoBehaviour
 {
     public BaseBullet bullet;
     [HideInInspector] public Vector3 direction;
-    private SpriteRenderer visualBullet;
+    private Animator visualBullet;
     private Rigidbody2D rb;
     private bool isReady = false;
     public string senderTag;
@@ -18,8 +18,8 @@ public class Projectile : MonoBehaviour
     {
         bullet = loadedBullet;
         rb = GetComponent<Rigidbody2D>();
-        visualBullet = GetComponent<SpriteRenderer>();
-        visualBullet.sprite = bullet.GetSprite();
+        visualBullet = GetComponent<Animator>();
+        visualBullet.runtimeAnimatorController = bullet.GetSprite();
         direction = Vector3.Normalize(bulletDirection - transform.position);
         senderTag = tag;
         isReady = true;
@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
     {
         lifeDuration += Time.deltaTime;
         if (!bullet.isAlive(lifeDuration))
-            Destroy(gameObject);
+            StartDestroy();
     }
     private void FixedUpdate()
     {
@@ -51,9 +51,19 @@ public class Projectile : MonoBehaviour
             {
                 collisionManager.OnHit(bullet.damage, transform.position);
             }
-            bullet.Impact();
-            Destroy(gameObject);
+            StartDestroy();
         }
+    }
 
+    private void StartDestroy()
+    {
+        bullet.Impact(visualBullet);
+            isReady = false;
+            Invoke("DestroyThis", 0.5f);
+    }
+
+    private void DestroyThis()
+    {
+        Destroy(this.gameObject);
     }
 }

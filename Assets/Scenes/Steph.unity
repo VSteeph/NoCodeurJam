@@ -12929,11 +12929,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6292198391996526664, guid: e0d575cbd01c3994c9a23f7dcb78a1d2,
-        type: 3}
-      propertyPath: HitEvent
-      value: event:/Avatar/Hit
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0d575cbd01c3994c9a23f7dcb78a1d2, type: 3}
 --- !u!213 &2129658641
