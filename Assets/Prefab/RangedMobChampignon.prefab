@@ -54,8 +54,8 @@ MonoBehaviour:
   invFrames: {fileID: 0}
   rb: {fileID: 7474622844706473482}
   col: {fileID: 7474622844706473487}
-  speed: 10
-  health: 5
+  speed: 7
+  health: 60
   currentHealth: 0
   Energy: 100
   isInvulnerable: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
   canMove: 1
   canDodge: 1
   canShot: 1
-  pushBackOnHit: 24
+  pushBackOnHit: 5
   framesToStopPushBack: 35
   shotCooldown: 0.5
   loadedBullet: {fileID: 7474622846186021690}
@@ -104,7 +104,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
