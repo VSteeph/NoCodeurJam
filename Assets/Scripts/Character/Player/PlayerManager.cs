@@ -33,7 +33,7 @@ public class PlayerManager : CharacterManager
 
     private void Start()
     {
-        onDeath += Reset;
+        ActivateAutoRespawn();
     }
     private void Update()
     {
@@ -109,5 +109,14 @@ public class PlayerManager : CharacterManager
         transform.position = initialPosition;
         rb.velocity = new Vector2(0, 0);
         Init();
+    }
+
+    public void DisableAutoRespawn()
+    {
+        onDeath -= Reset;
+    }
+    public void ActivateAutoRespawn()
+    {
+        onDeath += Reset;
     }
 }
