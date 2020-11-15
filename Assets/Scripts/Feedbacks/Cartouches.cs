@@ -8,6 +8,8 @@ public class Cartouches : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     public Vector2 AimDir;
     public float force;
+    public bool Energy;
+    public int EnergyAmount;
 
     void Start()
     {
@@ -22,11 +24,20 @@ public class Cartouches : MonoBehaviour
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
         rb.angularVelocity = 0f;
-        Invoke("TimeToDie", 1);
+        if(!Energy) Invoke("TimeToDie", 1);
     }
 
     void TimeToDie()
     {
         Destroy(this.gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.CompareTag("Player"))
+        {
+            CIvEnergyManager.cIvEnergyManager.GainEnergy(EnergyAmount);
+            Destroy(this.gameObject);
+        }
     }
 }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7474622844706473484}
   - component: {fileID: 7474622844706473486}
   - component: {fileID: 7474622844706473473}
+  - component: {fileID: 2274441464803294283}
   m_Layer: 0
   m_Name: RangedMobChampignon
   m_TagString: Monster
@@ -161,6 +162,25 @@ MonoBehaviour:
   projectile: {fileID: 4306524431173106794, guid: 0a8a1bf9b23b2244c892e072aed1d0ab,
     type: 3}
   characterManager: {fileID: 7474622844706473483}
+--- !u!114 &2274441464803294283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7474622844706473480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f251dd7bc0c2a4c91f68c562e1d6bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cartouche: {fileID: 8126338434037752872, guid: ff69aba3ce9fe774ea7916a852325025,
+    type: 3}
+  aim: {fileID: 0}
+  characterManager: {fileID: 7474622844706473483}
+  cartoucheTravelCoeff: 0
+  bulletSpawnPoint: {fileID: 7474622845043202638}
+  Robot: 1
 --- !u!1 &7474622845043202639
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,6 +319,7 @@ MonoBehaviour:
   framesOnHit: 10
   animator: {fileID: 7474622845043202624}
   weaponRenderer: {fileID: 0}
+  UseCameraShake: 0
 --- !u!1 &7474622845538374912
 GameObject:
   m_ObjectHideFlags: 0
