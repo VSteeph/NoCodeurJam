@@ -51,6 +51,7 @@ MonoBehaviour:
   characterManager: {fileID: 2111749776621728608}
   cartoucheTravelCoeff: 4
   bulletSpawnPoint: {fileID: 2111749775971233067}
+  Robot: 0
 --- !u!114 &4180111274529565196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,6 +88,7 @@ MonoBehaviour:
   framesOnHit: 35
   animator: {fileID: 2111749777664112592}
   weaponRenderer: {fileID: 2111749775971233066}
+  UseCameraShake: 0
 --- !u!1 &1784733225
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +407,7 @@ MonoBehaviour:
   invulnerabilityFramesAfterHit: 35
   dodgeCooldown: 3
   dodgeDurationInFrames: 10
-  dodgeForce: 1.5
+  dodgeForce: 13
   mousePosition: {x: 0, y: 0, z: 0}
 --- !u!114 &2111749776621728609
 MonoBehaviour:

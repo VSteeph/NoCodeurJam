@@ -13,7 +13,7 @@ public class Cartouches : MonoBehaviour
 
     void Start()
     {
-        rb.AddForce(new Vector2(-AimDir.x, Mathf.Abs(AimDir.y)+1).normalized * force, ForceMode2D.Impulse);
+        rb.AddForce(new Vector2(-AimDir.x, Mathf.Abs(AimDir.y) + 1).normalized * force, ForceMode2D.Impulse);
         rb.AddTorque(Random.value * force * 200);
         Invoke("StopRigidbody", 1);
     }
@@ -24,7 +24,7 @@ public class Cartouches : MonoBehaviour
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
         rb.angularVelocity = 0f;
-        if(!Energy) Invoke("TimeToDie", 1);
+        if (!Energy) Invoke("TimeToDie", 1);
     }
 
     void TimeToDie()
@@ -34,9 +34,10 @@ public class Cartouches : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.CompareTag("Player"))
+        if (col.CompareTag("Player"))
         {
-            CIvEnergyManager.cIvEnergyManager.GainEnergy(EnergyAmount);
+            if (CIvEnergyManager.cIvEnergyManager != null)
+                CIvEnergyManager.cIvEnergyManager.GainEnergy(EnergyAmount);
             Destroy(this.gameObject);
         }
     }

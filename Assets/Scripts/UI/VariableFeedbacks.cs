@@ -31,8 +31,11 @@ public class VariableFeedbacks : MonoBehaviour
     void UpdateDisplay()
     {
         Health = playerManager.currentHealth;
-        Civ = CIvEnergyManager.cIvEnergyManager.CivilisationPopulation;
-        Energy = CIvEnergyManager.TotalEnergy;
+        if(CIvEnergyManager.cIvEnergyManager != null)
+        {
+            Civ = CIvEnergyManager.cIvEnergyManager.CivilisationPopulation;
+            Energy = CIvEnergyManager.TotalEnergy;
+        }
         HealthBar.fillAmount = Health / playerManager.health;
         CivText.text = Civ.ToString();
         EnergyText.text = Energy.ToString();

@@ -21,11 +21,11 @@ public class DodgeAbility : MonoBehaviour
             if (dodgeFrame < playerManager.dodgeDurationInFrames)
             {
                 dodgeFrame++;
-                playerManager.rb.AddForce(playerManager.direction * playerManager.dodgeForce, ForceMode2D.Impulse);
             }
             else
             {
                 playerManager.canMoveWithInput = true;
+                playerManager.canMove = true;
                 playerManager.rb.velocity = Vector2.zero;
                 playerManager.isDodging = false;
                 playerManager.AfterDodge();
@@ -37,9 +37,11 @@ public class DodgeAbility : MonoBehaviour
     {
         playerManager.invFrames.StartInvulnerabilityFrame(playerManager.dodgeDurationInFrames);
         playerManager.canMoveWithInput = false;
+        playerManager.canMove = false;
         dodgeTimer = 0;
         dodgeFrame = 0;
         StartCoroutine(StartDodgeCooldown());
+        playerManager.rb.AddForce(playerManager.direction * playerManager.dodgeForce, ForceMode2D.Impulse);
         playerManager.isDodging = true;
     }
 

@@ -38,7 +38,7 @@ MonoBehaviour:
   Path: Fmod/NoCodeur/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637410433107274042
+  lastModified: 637410331663670927
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -165,13 +165,12 @@ MonoBehaviour:
   - {fileID: 6836696267796833845}
   - {fileID: -4472256891511550952}
   - {fileID: 2333933943102363684}
-  EditorParameters:
-  - {fileID: 6608180811783210489}
+  EditorParameters: []
   MasterBanks:
   - {fileID: 5264150132540470930}
   StringsBanks:
   - {fileID: -5206450814619468087}
-  stringsBankWriteTime: 637410433107274042
+  stringsBankWriteTime: 637410331663670927
   cacheVersion: 6
 --- !u!114 &1837811776856440671
 MonoBehaviour:
@@ -303,7 +302,7 @@ MonoBehaviour:
   Path: Fmod/NoCodeur/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637410433107214199
+  lastModified: 637410440791698018
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -326,7 +325,7 @@ MonoBehaviour:
   ID:
     data1: 1739329751
     data2: 2484633943
-  Exists: 1
+  Exists: 0
 --- !u!114 &6836696267796833845
 MonoBehaviour:
   m_ObjectHideFlags: 0
