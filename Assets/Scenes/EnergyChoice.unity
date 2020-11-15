@@ -313,6 +313,24 @@ MonoBehaviour:
   CivStartAmount: 150
   CivilisationPopulation: 150
   CompletedLevels: 0
+  speedPlayer: 0
+  speedPlayerIncrease: 5
+  hpPlayer: 0
+  hpPlayerIncrease: 5
+  lifeDurationBullet: 0
+  lifeDurationBulletIncrease: 5
+  speedBullet: 0
+  speedBulletIncrease: 5
+  damageBullet: 0
+  damageBulletIncrease: 5
+  shootCooldown: 0
+  shootCooldownIncrease: 5
+  dodgeCooldown: 0
+  dodgeCooldownIncrease: 5
+  dodgeDuration: 0
+  dodgeDurationIncrease: 5
+  pushBackMonster: 0
+  pushBackMonsterIncrease: 5
 --- !u!4 &695349514
 Transform:
   m_ObjectHideFlags: 0

@@ -34,6 +34,7 @@ public class MainMenuButtonManager : MonoBehaviour
         if(CIvEnergyManager.TotalEnergy >= UpgradeCost)
         {
             CIvEnergyManager.cIvEnergyManager.ConsumeEnergy(UpgradeCost);
+            CIvEnergyManager.cIvEnergyManager.Upgrade();
         }
         UpdateDisplay();
     }
