@@ -36,6 +36,7 @@ public class DodgeAbility : MonoBehaviour
     private void PerformDodge()
     {
         playerManager.invFrames.StartInvulnerabilityFrame(playerManager.dodgeDurationInFrames);
+        CameraShake.ShakeCamera(2, 0.1f);
         playerManager.canMoveWithInput = false;
         playerManager.canMove = false;
         dodgeTimer = 0;

@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 4996408316546526278}
   - component: {fileID: 4996408316546526394}
   - component: {fileID: 4996408316546526277}
-  - component: {fileID: 4996408316546526399}
-  - component: {fileID: 4996408316546526392}
   - component: {fileID: 4996408316546526393}
   - component: {fileID: -4912207974108198999}
   - component: {fileID: 4900038282328682903}
@@ -32,14 +30,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4996408316546526279}
-  m_LocalRotation: {x: -0.0027558543, y: 0.0009873377, z: 0.00095660164, w: 0.9999953}
+  m_LocalRotation: {x: -0.0027567383, y: 0.0009886958, z: 0.0009539629, w: 0.99999523}
   m_LocalPosition: {x: -0.019693935, y: -0.055135716, z: -9.999828}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4996408317283345627}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.316, y: 0.113000005, z: 0.109000005}
 --- !u!20 &4996408316546526276
 Camera:
   m_ObjectHideFlags: 0
@@ -160,99 +158,6 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 4996408317283345627}
---- !u!114 &4996408316546526399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4996408316546526279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ChannelMask: 1
-  m_Gain: 1
-  m_Use2DDistance: 0
---- !u!114 &4996408316546526392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4996408316546526279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ImpulseDefinition:
-    m_ImpulseChannel: 1
-    m_RawSignal: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
-    m_AmplitudeGain: 1
-    m_FrequencyGain: 1
-    m_RepeatMode: 0
-    m_Randomize: 1
-    m_TimeEnvelope:
-      m_AttackShape:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      m_DecayShape:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0.055934906
-          inSlope: 0.00033375277
-          outSlope: 0.00033375277
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0.056266785
-          inSlope: 0.00033375277
-          outSlope: 0.00033375277
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0
-        m_PreInfinity: 1
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      m_AttackTime: 0
-      m_SustainTime: 0.2
-      m_DecayTime: 0.7
-      m_ScaleWithImpact: 1
-      m_HoldForever: 0
-    m_ImpactRadius: 100
-    m_DirectionMode: 0
-    m_DissipationMode: 2
-    m_DissipationDistance: 1000
-    m_PropagationSpeed: 343
 --- !u!114 &4996408316546526393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43cce73d9c1146f49972f3c703e34912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Source: {fileID: 4996408316546526392}
+  Source: {fileID: 4996408316546526277}
 --- !u!114 &-4912207974108198999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,6 +228,7 @@ GameObject:
   - component: {fileID: 4996408317283345627}
   - component: {fileID: 4996408317283345625}
   - component: {fileID: 4996408317283345626}
+  - component: {fileID: 1967840308024616966}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -399,3 +305,20 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
+--- !u!114 &1967840308024616966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4996408317283345636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}

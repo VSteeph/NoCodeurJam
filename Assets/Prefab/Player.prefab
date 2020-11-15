@@ -88,7 +88,7 @@ MonoBehaviour:
   framesOnHit: 35
   animator: {fileID: 2111749777664112592}
   weaponRenderer: {fileID: 2111749775971233066}
-  UseCameraShake: 0
+  UseCameraShake: 1
 --- !u!1 &1784733225
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +400,7 @@ MonoBehaviour:
   canShot: 1
   pushBackOnHit: 5
   framesToStopPushBack: 35
-  shotCooldown: 1
+  shotCooldown: 0.5
   loadedBullet: {fileID: 2111749777760535096}
   canMoveWithInput: 1
   isDodging: 0

@@ -61,7 +61,7 @@ public class MonsterManager : CharacterManager
     {
         base.OnDeath();
         RemoveSelf();
-        CameraShake.ImpulseSource.GenerateImpulse(1);
+        CameraShake.ShakeCamera(4, 0.1f);
         Destroy(gameObject);
     }
 

@@ -27,7 +27,7 @@ public class HitFeedback : FeedbackManager
 
     private void MediumSCreenShake()
     {
-        CameraShake.ImpulseSource.GenerateImpulse(5);
+        CameraShake.ShakeCamera(10, 0.5f);
     }
 
     private IEnumerator SwitchingSprite()
