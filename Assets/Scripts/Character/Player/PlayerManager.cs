@@ -8,6 +8,8 @@ public class PlayerManager : CharacterManager
     [HideInInspector] public bool canMoveWithInput = true;
     [HideInInspector] public bool isDodging = false;
 
+    [SerializeField] public int invulnerabilityFramesAfterHit = 50;
+
     //Dodge
     [Header("Dodge")]
     public float dodgeCooldown = 2f;
@@ -19,12 +21,20 @@ public class PlayerManager : CharacterManager
     //Aim
     public Vector3 mousePosition;
 
+    //respawn
+    private Vector3 initialPosition;
+
     private void Awake()
     {
         base.Init();
         canMoveWithInput = true;
+        initialPosition = transform.position;
     }
 
+    private void Start()
+    {
+        onDeath += Reset;
+    }
     private void Update()
     {
         GetInput();
@@ -78,5 +88,25 @@ public class PlayerManager : CharacterManager
     public override Vector3 GetAim()
     {
         return mousePosition;
+    }
+
+    public override void OnHit(int damage, Vector3? explosionPoint = null)
+    {
+        if(!isInvulnerable)
+        {
+            invFrames.StartInvulnerabilityFrame(invulnerabilityFramesAfterHit);
+            base.OnHit(damage, explosionPoint);
+        }
+        else
+        {
+            Debug.Log("he is invulnerable");
+        }
+    }
+
+    public void Reset()
+    {
+        transform.position = initialPosition;
+        rb.velocity = new Vector2(0, 0);
+        Init();
     }
 }

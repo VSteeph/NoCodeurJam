@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1673556351}
-  - component: {fileID: 1673556352}
   - component: {fileID: 2106619485}
+  - component: {fileID: 4180111274529565196}
+  - component: {fileID: 2106619487}
   m_Layer: 8
   m_Name: Feedback
   m_TagString: Untagged
@@ -32,25 +33,6 @@ Transform:
   m_Father: {fileID: 2111749776621728638}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1673556352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1673556350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 392d3f5aa5d04c848903e4b57bdcf625, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterManager: {fileID: 2111749776621728608}
-  hasGuns: 1
-  gunVisual: {fileID: 2111749775971233067}
-  gunRecoilDistance: {x: 0.1, y: 0, z: 0}
-  gunRecoilSeedCoeff: 10
-  muzzleFlash: {fileID: 1884807999}
-  muzzleFramesDuration: 20
 --- !u!114 &2106619485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +51,42 @@ MonoBehaviour:
   characterManager: {fileID: 2111749776621728608}
   cartoucheTravelCoeff: 4
   bulletSpawnPoint: {fileID: 2111749775971233067}
+--- !u!114 &4180111274529565196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673556350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d015242d0b97fc54baf6e7a28cdabd7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterManager: {fileID: 2111749776621728608}
+  hasGuns: 1
+  gunVisual: {fileID: 2111749775971233067}
+  gunRecoilDistance: {x: 0.1, y: 0, z: 0}
+  gunRecoilSeedCoeff: 10
+  muzzleFlash: {fileID: 1884807999}
+  muzzleColor: {r: 1, g: 0, b: 0.13217449, a: 1}
+  muzzleFramesDuration: 20
+--- !u!114 &2106619487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673556350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec02a1dcb8689094a83cfb75b70f5fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterManager: {fileID: 2111749776621728608}
+  framesOnHit: 35
+  animator: {fileID: 2111749777664112592}
+  weaponRenderer: {fileID: 2111749775971233066}
 --- !u!1 &1784733225
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884807997}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.44, y: 0.11, z: 0.1}
+  m_LocalPosition: {x: 0.47, y: 0.11, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2111749775971233067}
@@ -170,7 +188,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 14722bd3aa7b2e544bc8bdc823e05155, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -378,10 +396,13 @@ MonoBehaviour:
   canMove: 1
   canDodge: 1
   canShot: 1
+  pushBackOnHit: 19
+  framesToStopPushBack: 35
   shotCooldown: 0.1
   loadedBullet: {fileID: 2111749777760535096}
   canMoveWithInput: 1
   isDodging: 0
+  invulnerabilityFramesAfterHit: 35
   dodgeCooldown: 1
   dodgeDurationInFrames: 10
   dodgeForce: 1.5
@@ -424,7 +445,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.006012678, y: -0.00000023841858}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -435,7 +456,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.627211, y: 0.87974596}
   m_EdgeRadius: 0
 --- !u!114 &2111749776621728637
 MonoBehaviour:
@@ -646,7 +667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b1f62203c14fb942a84f504d3903fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visual: {fileID: 21300000, guid: 14aa28b4384ed0f42bb95590f6be90f7, type: 3}
+  visual: {fileID: 22100000, guid: e9cfcce1655c4384b9be2d03c9089c11, type: 2}
   speed: 8
   damage: 2
   range: 0
@@ -697,7 +718,6 @@ MonoBehaviour:
   characterManager: {fileID: 2111749776621728608}
   ShootEvent: event:/Avatar/Shoot
   DodgeEvent: 
-  HitEvent: 
+  HitEvent: event:/Avatar/Hit
   RobotIdle: 
-  RobotHit: 
-  RobotDeath: 
+  Death: 

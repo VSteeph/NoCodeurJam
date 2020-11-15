@@ -1,10 +1,10 @@
 # NoCodeurJam
 
 Jeu réalisé pendant la Game Jam de Perpignan du 13 au 15 novembre :
-- Finir Mecanique de shoot
-- Permettre de customiser les projectiles basé sur les inputs et créer plusieurs variantes de projectiles avec un type de projectile chargée (charger interface dans projectile)
-- Créer un Prefab Player
-- Focus Feedback à fond sur les mécaniques
-- Systeme du jeu
-- Multiple Enemi & LD
 
+Les touches sont :
+- ZQSD pour le déplacement
+- Espace pour pouvoir Dash (invulnerabilité)
+- Clique gauche pour tirer
+
+Enjoy

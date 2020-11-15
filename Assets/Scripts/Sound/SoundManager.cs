@@ -8,7 +8,6 @@ public class SoundManager : MonoBehaviour
 {
     [Header("Stats")]
     [SerializeField] CharacterManager characterManager;
-    [Header("AvatarSounds")]
     [EventRef]
     public string ShootEvent = "";
     private  FMOD.Studio.EventDescription ShootEventDescription;
@@ -18,20 +17,17 @@ public class SoundManager : MonoBehaviour
     [EventRef]
     public string HitEvent = "";
     private  FMOD.Studio.EventDescription HitEventDescription;
-    [Header("RobotSounds")]
     [EventRef]
     public string RobotIdle = "";
     private  FMOD.Studio.EventDescription RobotIdleDescription;
     [EventRef]
-    public string RobotHit = "";
-    private  FMOD.Studio.EventDescription RobotHitDescription;
-    [EventRef]
-    public string RobotDeath = "";
+    public string Death = "";
     private  FMOD.Studio.EventDescription RobotDeathDescription;
 
     void Start() 
     {
         characterManager.onShot+=PlayShoot;
+        characterManager.onHit += PlayHit;
         Lookup();
     }
 
@@ -42,8 +38,7 @@ public class SoundManager : MonoBehaviour
         DodgeEventDescription = RuntimeManager.GetEventDescription(DodgeEvent);
         HitEventDescription = RuntimeManager.GetEventDescription(HitEvent);
         RobotIdleDescription = RuntimeManager.GetEventDescription(RobotIdle);
-        RobotHitDescription = RuntimeManager.GetEventDescription(RobotHit);
-        RobotDeathDescription = RuntimeManager.GetEventDescription(RobotDeath);
+        RobotDeathDescription = RuntimeManager.GetEventDescription(Death);
     }
 
     public void PlayShoot()
@@ -61,13 +56,8 @@ public class SoundManager : MonoBehaviour
         RuntimeManager.PlayOneShot(HitEvent);
     }
 
-    public void PlayRobotHit()
+    public void PlayDeath()
     {
-        RuntimeManager.PlayOneShot(RobotHit);
-    }
-
-    public void PlayRobotDeath()
-    {
-        RuntimeManager.PlayOneShot(RobotDeath);
+        RuntimeManager.PlayOneShot(Death);
     }
 }

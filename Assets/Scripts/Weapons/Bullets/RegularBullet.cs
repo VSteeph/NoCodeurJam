@@ -10,8 +10,8 @@ public class RegularBullet : BaseBullet
         return (new Vector2(direction.x, direction.y) * speed * Time.fixedDeltaTime);
     }
 
-    public override void Impact()
+    public override void Impact(Animator anim = null)
     {
-        Debug.Log("Impact Effect");
+        if(anim != null) anim.SetBool("Impact", true);
     }
 }

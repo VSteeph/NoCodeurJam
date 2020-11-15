@@ -7,19 +7,21 @@ public class Projectile : MonoBehaviour
 {
     public BaseBullet bullet;
     [HideInInspector] public Vector3 direction;
-    private SpriteRenderer visualBullet;
+    private Animator visualBullet;
     private Rigidbody2D rb;
     private bool isReady = false;
+    public string senderTag;
 
     private float lifeDuration = 0f;
 
-    public void InitializeProjectile(BaseBullet loadedBullet, Vector3 bulletDirection)
+    public void InitializeProjectile(BaseBullet loadedBullet, string tag, Vector3 bulletDirection)
     {
         bullet = loadedBullet;
         rb = GetComponent<Rigidbody2D>();
-        visualBullet = GetComponent<SpriteRenderer>();
-        visualBullet.sprite = bullet.GetSprite();
+        visualBullet = GetComponent<Animator>();
+        visualBullet.runtimeAnimatorController = bullet.GetSprite();
         direction = Vector3.Normalize(bulletDirection - transform.position);
+        senderTag = tag;
         isReady = true;
     }
 
@@ -27,7 +29,7 @@ public class Projectile : MonoBehaviour
     {
         lifeDuration += Time.deltaTime;
         if (!bullet.isAlive(lifeDuration))
-            Destroy(gameObject);
+            StartDestroy();
     }
     private void FixedUpdate()
     {
@@ -40,11 +42,28 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var collisionManager = collision.GetComponent<CharacterManager>();
-        if(collisionManager != null)
+        if (senderTag == collision.tag)
+            return;
+        else
         {
-            collisionManager.OnHit(bullet.damage);
+            var collisionManager = collision.GetComponent<CharacterManager>();
+            if (collisionManager != null)
+            {
+                collisionManager.OnHit(bullet.damage, transform.position);
+            }
+            StartDestroy();
         }
-        bullet.Impact();
+    }
+
+    private void StartDestroy()
+    {
+        bullet.Impact(visualBullet);
+            isReady = false;
+            Invoke("DestroyThis", 0.5f);
+    }
+
+    private void DestroyThis()
+    {
+        Destroy(this.gameObject);
     }
 }
