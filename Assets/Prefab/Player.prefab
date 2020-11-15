@@ -670,10 +670,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visual: {fileID: 22100000, guid: e9cfcce1655c4384b9be2d03c9089c11, type: 2}
-  speed: 8
+  speed: 7
   damage: 10
   range: 0
-  lifeDuration: 4
+  lifeDuration: 0.5
 --- !u!1 &7129351925663558082
 GameObject:
   m_ObjectHideFlags: 0

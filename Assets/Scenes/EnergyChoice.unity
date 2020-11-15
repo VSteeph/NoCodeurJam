@@ -359,28 +359,28 @@ MonoBehaviour:
   OnLoss:
     m_PersistentCalls:
       m_Calls: []
-  EnergyStartAmount: 190
+  EnergyStartAmount: 50
   CivStartAmount: 150
   CivilisationPopulation: 150
   CompletedLevels: 0
   speed: 0
-  speedPlayerIncrease: 0
+  speedPlayerIncrease: 1
   health: 0
-  hpPlayerIncrease: 0
+  hpPlayerIncrease: 1
   lifeDurationBullet: 0
-  lifeDurationBulletIncrease: 0
+  lifeDurationBulletIncrease: 0.3
   speedBullet: 0
-  speedBulletIncrease: 0
+  speedBulletIncrease: 1
   damageBullet: 0
-  damageBulletIncrease: 0
+  damageBulletIncrease: 2
   shootCooldown: 0
-  shootCooldownIncrease: 0
+  shootCooldownIncrease: 1
   dodgeCooldown: 0
-  dodgeCooldownIncrease: 0
+  dodgeCooldownIncrease: 1
   dodgeDuration: 0
-  dodgeDurationIncrease: 0
+  dodgeDurationIncrease: 3
   pushBackOnHit: 0
-  pushBackMonsterIncrease: 0
+  pushBackMonsterIncrease: 3
 --- !u!4 &695349514
 Transform:
   m_ObjectHideFlags: 0
