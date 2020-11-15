@@ -14,15 +14,16 @@ public class CIvEnergyManager : MonoBehaviour
     public static CIvEnergyManager cIvEnergyManager;
     public int CompletedLevels;
     private bool MainMenu;
+    private bool Lost;
     void Awake()
     {
         MainMenu = true;
+        Reset();
         if(CIvEnergyManager.cIvEnergyManager != null) Destroy(this.gameObject);
         else
         {
             DontDestroyOnLoad(this.gameObject);
             CIvEnergyManager.cIvEnergyManager = this;
-            Reset();
         }
     }
 
@@ -38,7 +39,7 @@ public class CIvEnergyManager : MonoBehaviour
 
     void Update()
     {
-        if(CIvEnergyManager.TotalEnergy <= 0 || CivilisationPopulation <= 0)
+        if((CIvEnergyManager.TotalEnergy <= 0 || CivilisationPopulation <= 0) && !Lost)
         {
             OnLoss.Invoke();
             CaravanPerished();
@@ -48,7 +49,7 @@ public class CIvEnergyManager : MonoBehaviour
             StartPopulationLoss();
             once = true;
         }
-        if(CIvEnergyManager.TotalEnergy > 50) once = false;
+        if(CIvEnergyManager.TotalEnergy >= 100) once = false;
     }
 
     public void StartPopulationLoss()
@@ -99,17 +100,20 @@ public class CIvEnergyManager : MonoBehaviour
 
     public void Reset()
     {
-        TotalEnergy += EnergyStartAmount;
+        TotalEnergy = EnergyStartAmount;
         CivilisationPopulation = CivStartAmount;
+        Lost = false;
     }
 
     public void CaravanPerished()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(10);
+        Lost = true;
     }
 
     public void PlayerPerished()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(11);
+        Lost = true;
     }
 }

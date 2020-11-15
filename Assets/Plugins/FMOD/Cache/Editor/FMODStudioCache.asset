@@ -195,6 +195,7 @@ MonoBehaviour:
   MasterBanks:
   - {fileID: 7679928206910485713}
   StringsBanks:
+
   - {fileID: 5949723338451618524}
   stringsBankWriteTime: 637410342152200627
   cacheVersion: 6
@@ -256,6 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Progress
   m_EditorClassIdentifier: 
+
   Name: Progress
   Min: 0
   Max: 1
@@ -348,6 +350,7 @@ MonoBehaviour:
   Path: Fmod/NoCodeur/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+
   lastModified: 637410342152200627
   LoadResult: 0
   FileSizes:
