@@ -72,6 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  robot: {fileID: 8495410462710862956}
 --- !u!1 &8495410463493379578
 GameObject:
   m_ObjectHideFlags: 0

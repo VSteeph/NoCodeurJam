@@ -45,10 +45,10 @@ public class CIvEnergyManager : MonoBehaviour
     {
         GenerateUpgrade();
         MainMenu = true;
-        Reset();
         if(CIvEnergyManager.cIvEnergyManager != null) Destroy(this.gameObject);
         else
         {
+            Reset();
             DontDestroyOnLoad(this.gameObject);
             CIvEnergyManager.cIvEnergyManager = this;
         }
