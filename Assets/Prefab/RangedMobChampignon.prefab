@@ -70,6 +70,7 @@ MonoBehaviour:
   monsterMovement: {fileID: 7474622844706473484}
   range: 3
   attackTimer: 0
+  robotManager: {fileID: 0}
   target: {fileID: 0}
   playerManager: {fileID: 0}
 --- !u!50 &7474622844706473482
@@ -172,6 +173,7 @@ GameObject:
   - component: {fileID: 7474622845043202625}
   - component: {fileID: 7474622845043202624}
   - component: {fileID: 103052666}
+  - component: {fileID: 8899889712067266269}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -281,6 +283,22 @@ MonoBehaviour:
   HitEvent: 
   RobotIdle: 
   Death: 
+--- !u!114 &8899889712067266269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7474622845043202639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec02a1dcb8689094a83cfb75b70f5fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterManager: {fileID: 7474622844706473483}
+  framesOnHit: 10
+  animator: {fileID: 7474622845043202624}
+  weaponRenderer: {fileID: 0}
 --- !u!1 &7474622845538374912
 GameObject:
   m_ObjectHideFlags: 0

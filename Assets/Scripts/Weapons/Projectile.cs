@@ -58,8 +58,9 @@ public class Projectile : MonoBehaviour
     private void StartDestroy()
     {
         bullet.Impact(visualBullet);
-            isReady = false;
-            Invoke("DestroyThis", 0.5f);
+        this.GetComponent<CircleCollider2D>().enabled = false;
+        isReady = false;
+        Invoke("DestroyThis", 0.5f);
     }
 
     private void DestroyThis()

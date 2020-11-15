@@ -51,6 +51,7 @@ public class MonsterManager : CharacterManager
     {
         base.OnDeath();
         RemoveSelf();
+        CameraShake.ImpulseSource.GenerateImpulse(5);
         Destroy(gameObject);
     }
 
@@ -71,5 +72,11 @@ public class MonsterManager : CharacterManager
     public void RemoveSelf()
     {
         robotManager.Monsters.Remove(this);
+    }
+
+    public override void OnHit(int damage, Vector3? explosionPoint = null)
+    {
+        base.OnHit(damage, explosionPoint);
+
     }
 }

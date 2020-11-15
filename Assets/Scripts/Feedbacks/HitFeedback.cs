@@ -9,12 +9,13 @@ public class HitFeedback : FeedbackManager
     [SerializeField] private SpriteRenderer weaponRenderer;
     private Sprite originalSprite;
     private int currentFrames;
+    public bool UseCameraShake;
 
 
     private void Start()
     {
         characterManager.onHit += SwapSprite;
-        characterManager.onHit += MediumSCreenShake;
+        if(UseCameraShake) characterManager.onHit += MediumSCreenShake;
     }
 
     private void SwapSprite()
