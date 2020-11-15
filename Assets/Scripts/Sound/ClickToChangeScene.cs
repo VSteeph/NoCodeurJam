@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ClickToChangeScene : MonoBehaviour
 {
+    public bool Caravan;
     void Update()
     {
         if(Input.anyKeyDown)
         {
-            CIvEnergyManager.cIvEnergyManager.Reset();
+            if(Caravan) CIvEnergyManager.cIvEnergyManager.Reset();
             CIvEnergyManager.cIvEnergyManager.BackToChoiceMenu();
         }
     }
