@@ -35,7 +35,6 @@ public class MonsterManager : CharacterManager
     {
         if(direction.magnitude < rangeDetection)
         {
-            Debug.Log("PLAYER DETECTED");
             if (direction.magnitude > range)
             {
                 if (!isMoving)
@@ -53,7 +52,6 @@ public class MonsterManager : CharacterManager
         }
         else
         {
-            Debug.Log("PLAYER UNDETECTED");
             isMoving = false;
             StopMoving();
         }
@@ -63,7 +61,7 @@ public class MonsterManager : CharacterManager
     {
         base.OnDeath();
         RemoveSelf();
-        CameraShake.ImpulseSource.GenerateImpulse(5);
+        CameraShake.ImpulseSource.GenerateImpulse(1);
         Destroy(gameObject);
     }
 
