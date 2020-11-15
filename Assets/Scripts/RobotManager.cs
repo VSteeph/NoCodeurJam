@@ -24,6 +24,14 @@ public class RobotManager : MonoBehaviour
         }
     }
 
+    public void SyncEveryRobotPushBack(float force)
+    {
+        for (int i = 0; i < Monsters.Count; i++)
+        {
+            Monsters[i].pushBackOnHit += force;
+        }
+    }
+
     
 
 

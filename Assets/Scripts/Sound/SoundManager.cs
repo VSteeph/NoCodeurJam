@@ -26,8 +26,11 @@ public class SoundManager : MonoBehaviour
 
     void Start() 
     {
-        characterManager.onShot+=PlayShoot;
-        characterManager.onHit += PlayHit;
+        if(characterManager != null)
+        {
+            characterManager.onShot += PlayShoot;
+            characterManager.onHit += PlayHit;
+        }
         Lookup();
     }
 

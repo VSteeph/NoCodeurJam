@@ -5,10 +5,10 @@ using UnityEngine;
 public abstract class BaseBullet : MonoBehaviour
 {
     [SerializeField] protected RuntimeAnimatorController visual;
-    [SerializeField] protected float speed;
+    [SerializeField] public float speed;
     [SerializeField] public int damage;
     [SerializeField] public int range;
-    [SerializeField] protected float lifeDuration;
+    [SerializeField] public float lifeDuration;
 
     public virtual RuntimeAnimatorController GetSprite()
     {
