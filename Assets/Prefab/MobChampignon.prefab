@@ -283,8 +283,8 @@ MonoBehaviour:
   shotCooldown: 0.5
   loadedBullet: {fileID: 843847273}
   monsterMovement: {fileID: 5275338560763824486}
-  range: 2
-  attackTimer: 0.5
+  range: 1
+  attackTimer: 1
   robotManager: {fileID: 0}
   target: {fileID: 0}
   playerManager: {fileID: 0}

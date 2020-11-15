@@ -171,7 +171,7 @@ PrefabInstance:
     - target: {fileID: 2111749776621728638, guid: e0d575cbd01c3994c9a23f7dcb78a1d2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2111749776621728638, guid: e0d575cbd01c3994c9a23f7dcb78a1d2,
         type: 3}
@@ -251,7 +251,7 @@ PrefabInstance:
     - target: {fileID: 4996408316546526395, guid: 2b4dfa9d0f1806d40808f30dd75e678b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4996408316546526395, guid: 2b4dfa9d0f1806d40808f30dd75e678b,
         type: 3}
@@ -326,7 +326,7 @@ PrefabInstance:
     - target: {fileID: 8495410463493379577, guid: 2c98bbb89ef697a4ebae57b49f87b6e7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8495410463493379577, guid: 2c98bbb89ef697a4ebae57b49f87b6e7,
         type: 3}
@@ -404,7 +404,7 @@ Transform:
   - {fileID: 956735224}
   - {fileID: 621198408}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &621198407
 GameObject:
@@ -11309,15 +11309,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
---- !u!1001 &1122395327
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications: []
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 0}
 --- !u!1 &1941173169
 GameObject:
   m_ObjectHideFlags: 0
