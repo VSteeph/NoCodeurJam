@@ -41,6 +41,8 @@ public class CIvEnergyManager : MonoBehaviour
     private Dictionary<string, object> UpgradeWithBasedIncrease;
     private System.Random rand = new System.Random();
 
+    private string lastMessage;
+
     void Awake()
     {
         GenerateUpgrade();
@@ -170,13 +172,20 @@ public class CIvEnergyManager : MonoBehaviour
         {
             var newValue = (int)parameters.GetValue(this) + (int)element.Value;
             parameters.SetValue(this, newValue);
-            Debug.Log(element.Key + " was upgradezd from " + oldValue + " to " + newValue);
+            lastMessage = element.Key + " was upgraded from " + oldValue + " to " + newValue;
         }
         else
         {
             var newValue = (float)parameters.GetValue(this) + (float)element.Value;
             parameters.SetValue(this, newValue);
+            lastMessage = element.Key + " was upgraded from " + oldValue + " to " + newValue;
         }
+        
+    }
+
+    public string GetLastMessage()
+    {
+        return lastMessage;
     }
 
     public void SyncCharacterStats(PlayerManager player, RobotManager robot)
