@@ -31,10 +31,6 @@ public class PlayerManager : CharacterManager
         initialPosition = transform.position;
     }
 
-    private void Start()
-    {
-        ActivateAutoRespawn();
-    }
     private void Update()
     {
         GetInput();
