@@ -278,7 +278,7 @@ MonoBehaviour:
   canMove: 1
   canDodge: 1
   canShot: 1
-  pushBackOnHit: 6
+  pushBackOnHit: 4
   framesToStopPushBack: 35
   shotCooldown: 0.5
   loadedBullet: {fileID: 843847273}
