@@ -83,7 +83,7 @@ public class CIvEnergyManager : MonoBehaviour
 
     void Update()
     {
-        if((CivilisationPopulation <= 0) && !Lost)
+        if((CivilisationPopulation <= 0))
         {
             OnLoss.Invoke();
             CaravanPerished();
@@ -146,6 +146,7 @@ public class CIvEnergyManager : MonoBehaviour
         TotalEnergy = EnergyStartAmount;
         CivilisationPopulation = CivStartAmount;
         Lost = false;
+        CompletedLevels = 0;
     }
 
     public void CaravanPerished()
