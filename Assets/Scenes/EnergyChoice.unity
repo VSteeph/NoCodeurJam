@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.22352943, g: 0.8588236, b: 0.25882354, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -313,24 +313,6 @@ MonoBehaviour:
   CivStartAmount: 150
   CivilisationPopulation: 150
   CompletedLevels: 0
-  speedPlayer: 0
-  speedPlayerIncrease: 5
-  hpPlayer: 0
-  hpPlayerIncrease: 5
-  lifeDurationBullet: 0
-  lifeDurationBulletIncrease: 5
-  speedBullet: 0
-  speedBulletIncrease: 5
-  damageBullet: 0
-  damageBulletIncrease: 5
-  shootCooldown: 0
-  shootCooldownIncrease: 5
-  dodgeCooldown: 0
-  dodgeCooldownIncrease: 5
-  dodgeDuration: 0
-  dodgeDurationIncrease: 5
-  pushBackMonster: 0
-  pushBackMonsterIncrease: 5
 --- !u!4 &695349514
 Transform:
   m_ObjectHideFlags: 0
@@ -982,7 +964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.22352943, g: 0.8588236, b: 0.25882354, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1283,7 +1265,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 11e327bfc36320a44a8af7cbc65c5e6b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1584,7 +1566,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 8a66956d7e247d243a161db0d4163827, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
