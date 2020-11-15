@@ -8,7 +8,8 @@ public class CIvEnergyManager : MonoBehaviour
     public UnityEngine.Events.UnityEvent OnLoss;
     public static int TotalEnergy;
     public int EnergyStartAmount;
-    public int CivilisationPopulation;
+    public int CivStartAmount;
+    [HideInInspector] public int CivilisationPopulation;
     private bool once = false;
     public static CIvEnergyManager cIvEnergyManager;
     public int CompletedLevels;
@@ -21,7 +22,7 @@ public class CIvEnergyManager : MonoBehaviour
         {
             DontDestroyOnLoad(this.gameObject);
             CIvEnergyManager.cIvEnergyManager = this;
-            TotalEnergy += EnergyStartAmount;
+            Reset();
         }
     }
 
@@ -40,8 +41,9 @@ public class CIvEnergyManager : MonoBehaviour
         if(CIvEnergyManager.TotalEnergy <= 0 || CivilisationPopulation <= 0)
         {
             OnLoss.Invoke();
+            CaravanPerished();
         }
-        if(CIvEnergyManager.TotalEnergy <= 50 && !once && !MainMenu)
+        if(CIvEnergyManager.TotalEnergy <= 100 && !once && !MainMenu)
         {
             StartPopulationLoss();
             once = true;
@@ -51,29 +53,29 @@ public class CIvEnergyManager : MonoBehaviour
 
     public void StartPopulationLoss()
     {
-        if(CIvEnergyManager.TotalEnergy < 50 && CIvEnergyManager.TotalEnergy >= 40)
+        if(CIvEnergyManager.TotalEnergy < 100 && CIvEnergyManager.TotalEnergy >= 40)
         {
             CivilisationPopulation -= 1;
             Invoke("StartPopulationLoss",5);
         }
         else if(CIvEnergyManager.TotalEnergy < 40 && CIvEnergyManager.TotalEnergy >= 30)
         {
-            CivilisationPopulation -= 2;
+            CivilisationPopulation -= 3;
             Invoke("StartPopulationLoss",5);
         }
         else if(CIvEnergyManager.TotalEnergy < 30 && CIvEnergyManager.TotalEnergy >= 20)
         {
-            CivilisationPopulation -= 3;
+            CivilisationPopulation -= 6;
             Invoke("StartPopulationLoss",5);
         }
         else if(CIvEnergyManager.TotalEnergy < 20 && CIvEnergyManager.TotalEnergy >= 10)
         {
-            CivilisationPopulation -= 4;
+            CivilisationPopulation -= 8;
             Invoke("StartPopulationLoss",5);
         }
         else if(CIvEnergyManager.TotalEnergy < 10)
         {
-            CivilisationPopulation -= 5;
+            CivilisationPopulation -= 10;
             Invoke("StartPopulationLoss",5);
         }
     }
@@ -95,5 +97,19 @@ public class CIvEnergyManager : MonoBehaviour
         MainMenu =true;
     }
 
-    
+    public void Reset()
+    {
+        TotalEnergy += EnergyStartAmount;
+        CivilisationPopulation = CivStartAmount;
+    }
+
+    public void CaravanPerished()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(10);
+    }
+
+    public void PlayerPerished()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(11);
+    }
 }
