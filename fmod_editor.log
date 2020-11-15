@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000190ABC21078 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000028BBD9DF2C8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,109 +15,13 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 10138496
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 18048
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000003EBA78F318
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE1DF87E30
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE1DF87E00
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE1DF87F00
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE1DF87FC0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000190A9555B38
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='sfx_sounds_interaction21', format=5, channels=1, frequency=48000, lengthbytes=3872, lengthpcm=26351, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501251.
-[LOG] SystemI::createSound                     : filename = Fmod\NoCodeur\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000190F7BD35C8 : node = 000001904BEC5200
-[LOG] SystemI::createSound                     : add node to async list : head = 00000190F7DBA498.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000190F7BD35C8
-[LOG] SystemI::createSoundInternal             :     Create name='Fmod\NoCodeur\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10138496
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 18048
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001904BEC5310
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     filename = Fmod\NoCodeur\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000190F7BD55D8 : node = 000001904BEC4800
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000190F7DBA498.  list count = 0
-[LOG] SystemI::createSound                     :     filename = Fmod\NoCodeur\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000190F7BCFC68 : node = 000001904BEC5340
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000190F7DBA498.  list count = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='SmallRobot_Idle', format=5, channels=2, frequency=48000, lengthbytes=231552, lengthpcm=1440000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.468031.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000190F7BD35C8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000190F7BD55D8
-[LOG] SystemI::createSoundInternal             :     Create name='Fmod\NoCodeur\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10138496
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 18048
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001904BEC4910
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='DesertAmbiance', format=5, channels=2, frequency=48000, lengthbytes=2848672, lengthpcm=10848000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.088464.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000190F7BD55D8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000190F7BCFC68
-[LOG] SystemI::createSoundInternal             :     Create name='Fmod\NoCodeur\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10138496
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 18048
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001904BEC5450
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Frénésie', format=5, channels=2, frequency=48000, lengthbytes=1256352, lengthpcm=4650666, pcmblocksize=0, loopstart=0, loopend=4639998, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975708.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000190F7BCFC68
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000190F7BD1FD8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000190F7BD1FD8
-[LOG] SoundI::release                          : Thoughts (00000190F7BC82E8)
-[LOG] SoundI::release                          :     Thoughts (00000190F4548328)
-[LOG] SoundI::release                          :     Thoughts (00000190F7BC8498)
-[LOG] SoundI::release                          : Campfire (00000190F7BCAD18)
-[LOG] SoundI::release                          :     Campfire (00000190F4547E48)
-[LOG] SoundI::release                          :     Campfire (00000190F7BCB738)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000190F7BD1FD8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000190F7BD1FD8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000190F7BD5788
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000190F7BD5788
-[LOG] SoundI::release                          : Frénésie (00000190F7BCFC68)
-[LOG] SoundI::release                          :     Frénésie (00000190F454A548)
-[LOG] SoundI::release                          :     Frénésie (00000190F7BD1FD8)
-[LOG] SoundI::release                          : SmallRobot_Idle (00000190F7BD35C8)
-[LOG] SoundI::release                          :     SmallRobot_Idle (00000190F4549028)
-[LOG] SoundI::release                          :     SmallRobot_Idle (00000190F7BD3268)
-[LOG] SoundI::release                          : DesertAmbiance (00000190F7BD55D8)
-[LOG] SoundI::release                          :     DesertAmbiance (00000190F454A3A8)
-[LOG] SoundI::release                          :     DesertAmbiance (00000190F7BD5788)
-[LOG] SoundI::release                          :  (00000190AF912548)
-[LOG] SoundI::release                          :     sfx_sounds_interaction21 (00000190F444AB38)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
