@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 5275338560763824485}
   - component: {fileID: 5275338560763824486}
   - component: {fileID: 5275338560763824482}
+  - component: {fileID: 8168392088944578916}
   m_Layer: 13
   m_Name: MobChampignon
   m_TagString: Monster
@@ -312,6 +313,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterManager: {fileID: 5275338560763824485}
+--- !u!114 &8168392088944578916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5275338560763824488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f251dd7bc0c2a4c91f68c562e1d6bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cartouche: {fileID: 8126338434037752872, guid: ff69aba3ce9fe774ea7916a852325025,
+    type: 3}
+  aim: {fileID: 0}
+  characterManager: {fileID: 5275338560763824485}
+  cartoucheTravelCoeff: 5
+  bulletSpawnPoint: {fileID: 5275338560925438683}
+  Robot: 1
 --- !u!1 &5275338560925438682
 GameObject:
   m_ObjectHideFlags: 0
