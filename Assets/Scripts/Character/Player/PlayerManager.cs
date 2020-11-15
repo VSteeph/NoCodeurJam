@@ -82,6 +82,7 @@ public class PlayerManager : CharacterManager
 
     public void AfterDodge()
     {
+        rb.velocity = Vector2.zero;
         afterdodge?.Invoke();
     }
 

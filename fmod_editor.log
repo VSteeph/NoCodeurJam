@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000028BBD9DF2C8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000028C0E3C6298 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,8 +16,133 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028BC09F4188
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028BC09F4188
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028BC09F7428
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028BC09F7428
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 10142304
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19008
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000B284F7EFA8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE1F147E30
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE1F147E00
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE1F147F00
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE1F147FC0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000028BC0A61488
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='sfx_sounds_damage1', format=5, channels=1, frequency=48000, lengthbytes=1824, lengthpcm=8329, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501129.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 10142304
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 19008
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000B284F7EFA8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE1F147E30
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE1F147E00
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE1F147F00
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE1F147FC0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000028BC0A61488
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='sfx_sounds_damage3', format=5, channels=1, frequency=48000, lengthbytes=1888, lengthpcm=8300, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.501160.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000028BC09F8868
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000028BC09F8868
+[LOG] SoundI::release                          : Frénésie (0000028BC0A00398)
+[LOG] SoundI::release                          :     Frénésie (0000028BE6A5FB08)
+[LOG] SoundI::release                          :     Frénésie (0000028BC09F8508)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC0A02F78)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBA5115D8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F9948)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC0A021F8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBA511DF8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F5418)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC0A02DC8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBA5110F8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F6348)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC0A01E98)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBA510C18)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09FA518)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC09FE898)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBA510DB8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F4BA8)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC0A017D8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBA510A78)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F50B8)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC09FB5F8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BE6A5DC28)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F4188)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC0A01628)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBA510F58)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F49F8)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC09FC6D8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BE6A5DA88)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F4698)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC0A01B38)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBA5108D8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F8868)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC0A00548)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BE6A61848)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F9288)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC0A037E8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBA5103F8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F4F08)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC09FD7B8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BE6A5DDC8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F90D8)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC0A023A8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBA511C58)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F4D58)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC09FF108)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BE6A5E108)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09FA368)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC0A03638)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBA511438)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09FA878)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC0A006F8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BE6A5FFE8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F7428)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC09F7C98)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBBF3FA28)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F9AF8)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC0A03128)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBA511918)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F44E8)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC09F66A8)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBBF3E508)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F81A8)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC0A02558)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBA510738)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F5AD8)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC09FD458)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BE6A5D268)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F7AE8)
+[LOG] SoundI::release                          : SmallRobot_Idle (0000028BC09F5928)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BBA511F98)
+[LOG] SoundI::release                          :     SmallRobot_Idle (0000028BC09F7E48)
+[LOG] SoundI::release                          : DesertAmbiance (0000028BC09FAD88)
+[LOG] SoundI::release                          :     DesertAmbiance (0000028BE6A5F968)
+[LOG] SoundI::release                          :     DesertAmbiance (0000028BC09F3FD8)
+[LOG] SoundI::release                          :  (0000028BE5C127B8)
+[LOG] SoundI::release                          :     sfx_sounds_damage3 (0000028B5EA6FC98)
+[LOG] SoundI::release                          :  (0000028BE5C152D8)
+[LOG] SoundI::release                          :     sfx_sounds_damage1 (0000028B5EA711B8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -25,3 +150,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
