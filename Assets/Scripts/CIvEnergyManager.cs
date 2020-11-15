@@ -35,8 +35,8 @@ public class CIvEnergyManager : MonoBehaviour
     [SerializeField] public float dodgeCooldownIncrease;
     [HideInInspector] public int dodgeDuration;
     [SerializeField] public int dodgeDurationIncrease;
-    [HideInInspector] public int pushBackOnHit;
-    [SerializeField] public int pushBackMonsterIncrease;
+    [HideInInspector] public float pushBackOnHit;
+    [SerializeField] public float pushBackMonsterIncrease;
 
     private Dictionary<string, object> UpgradeWithBasedIncrease;
     private System.Random rand = new System.Random();

@@ -178,7 +178,7 @@ MonoBehaviour:
     type: 3}
   aim: {fileID: 0}
   characterManager: {fileID: 7474622844706473483}
-  cartoucheTravelCoeff: 0
+  cartoucheTravelCoeff: 5
   bulletSpawnPoint: {fileID: 7474622845043202638}
   Robot: 1
 --- !u!1 &7474622845043202639
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b1f62203c14fb942a84f504d3903fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visual: {fileID: 22100000, guid: e9cfcce1655c4384b9be2d03c9089c11, type: 2}
+  visual: {fileID: 22100000, guid: a5f29ff87b4924f45ab56ff73272adda, type: 2}
   speed: 5
   damage: 1
   range: 0
