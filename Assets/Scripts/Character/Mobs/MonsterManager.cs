@@ -10,7 +10,8 @@ public class MonsterManager : CharacterManager
     [Header("Attack stats")]
     public int range;
     public float attackTimer;
-
+    [Header("Refs")]
+    public RobotManager robotManager;
     [HideInInspector] public Transform target;
     [HideInInspector] public CharacterManager playerManager;
 
@@ -49,6 +50,7 @@ public class MonsterManager : CharacterManager
     public override void OnDeath()
     {
         base.OnDeath();
+        RemoveSelf();
         Destroy(gameObject);
     }
 
@@ -64,5 +66,10 @@ public class MonsterManager : CharacterManager
     public override Vector3 GetAim()
     {
         return target.position;
+    }
+
+    public void RemoveSelf()
+    {
+        robotManager.Monsters.Remove(this);
     }
 }
