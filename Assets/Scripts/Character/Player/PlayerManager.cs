@@ -94,7 +94,7 @@ public class PlayerManager : CharacterManager
     {
         if(!isInvulnerable)
         {
-            invFrames.StartInvulnerabilityFrame(invulnerabilityFramesAfterHit);
+            invFrames.StartInvulnerabilityFrame(invulnerabilityFramesAfterHit,true);
             base.OnHit(damage, explosionPoint);
         }
         else
