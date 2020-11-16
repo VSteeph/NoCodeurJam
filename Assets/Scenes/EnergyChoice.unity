@@ -456,6 +456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 695349514}
   - component: {fileID: 695349513}
+  - component: {fileID: 695349515}
   m_Layer: 0
   m_Name: MainManager
   m_TagString: Untagged
@@ -501,7 +502,7 @@ MonoBehaviour:
   dodgeDurationIncrease: 3
   pushBackOnHit: 0
   pushBackMonsterIncrease: 3
-  sceneChanger: {fileID: 0}
+  sceneChanger: {fileID: 695349515}
 --- !u!4 &695349514
 Transform:
   m_ObjectHideFlags: 0
@@ -517,6 +518,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &695349515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695349512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecdb49f3db6f42c45ae9eb5576a73208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 185867874}
 --- !u!1 &811558130
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,7 +722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
