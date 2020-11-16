@@ -300,6 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18771f6d2005e34d9d11dc28d4d8786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Caravan: 1
 --- !u!114 &1802079165
 MonoBehaviour:
   m_ObjectHideFlags: 0

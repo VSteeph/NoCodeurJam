@@ -10,6 +10,7 @@ public class Cartouches : MonoBehaviour
     public float force;
     public bool Energy;
     public int EnergyAmount;
+    [SerializeField] private SoundManager soundManager;
 
     void Start()
     {
@@ -37,7 +38,10 @@ public class Cartouches : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             if (CIvEnergyManager.cIvEnergyManager != null)
+            {
                 CIvEnergyManager.cIvEnergyManager.GainEnergy(EnergyAmount);
+                soundManager.PlayShoot();
+            }
             Destroy(this.gameObject);
         }
     }

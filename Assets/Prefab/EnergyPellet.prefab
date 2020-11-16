@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 8126338434037752885}
   - component: {fileID: 8126338434037752884}
   - component: {fileID: 8985756767213910181}
-  m_Layer: 0
+  - component: {fileID: 3465178516682148505}
+  m_Layer: 11
   m_Name: EnergyPellet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,6 +123,7 @@ MonoBehaviour:
   force: 0
   Energy: 1
   EnergyAmount: 10
+  soundManager: {fileID: 3465178516682148505}
 --- !u!61 &8985756767213910181
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,3 +150,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.45372993, y: 0.51631725}
   m_EdgeRadius: 0
+--- !u!114 &3465178516682148505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8126338434037752872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3517f7f87685e459eabb2ffd059ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterManager: {fileID: 0}
+  ShootEvent: event:/Avatar/PickUP
+  DodgeEvent: 
+  HitEvent: 
+  RobotIdle: 
+  Death: 

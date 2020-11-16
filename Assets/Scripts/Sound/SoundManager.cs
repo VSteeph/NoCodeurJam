@@ -37,11 +37,11 @@ public class SoundManager : MonoBehaviour
 
     void Lookup()
     {
-        ShootEventDescription = RuntimeManager.GetEventDescription(ShootEvent);
-        DodgeEventDescription = RuntimeManager.GetEventDescription(DodgeEvent);
-        HitEventDescription = RuntimeManager.GetEventDescription(HitEvent);
-        RobotIdleDescription = RuntimeManager.GetEventDescription(RobotIdle);
-        RobotDeathDescription = RuntimeManager.GetEventDescription(Death);
+        if(ShootEvent != "") ShootEventDescription = RuntimeManager.GetEventDescription(ShootEvent);
+        if(DodgeEvent != "") DodgeEventDescription = RuntimeManager.GetEventDescription(DodgeEvent);
+        if(HitEvent != "") HitEventDescription = RuntimeManager.GetEventDescription(HitEvent);
+        if(RobotIdle != "") RobotIdleDescription = RuntimeManager.GetEventDescription(RobotIdle);
+        if(Death != "") RobotDeathDescription = RuntimeManager.GetEventDescription(Death);
     }
 
     public void PlayShoot()

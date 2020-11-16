@@ -15,7 +15,9 @@ public class CharacterMovement : MonoBehaviour
     {
         if(characterManager.canMove)
         {
-            Vector2 movementVector = Vector3.Normalize(characterManager.direction) * characterManager.speed * Time.fixedDeltaTime;
+            Vector2 dir = characterManager.direction;
+            if(dir.magnitude > 1) dir = dir.normalized;
+            Vector2 movementVector = dir * characterManager.speed * Time.fixedDeltaTime;
             characterManager.rb.MovePosition( characterManager.rb.position + movementVector);
         }
     }

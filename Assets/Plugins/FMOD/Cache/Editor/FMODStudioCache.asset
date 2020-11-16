@@ -20,6 +20,26 @@ MonoBehaviour:
     data1: 1739329751
     data2: 2484633943
   Exists: 0
+--- !u!114 &-6572049028952917162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Progress
+  m_EditorClassIdentifier: 
+  Name: Progress
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1739329751
+    data2: 2484633943
+  Exists: 1
 --- !u!114 &-5679639789603531794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,7 +62,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 130
 --- !u!114 &-5206450814619468087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,7 +78,7 @@ MonoBehaviour:
   Path: Fmod/NoCodeur/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637410331663670927
+  lastModified: 637411254593143867
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -205,12 +225,13 @@ MonoBehaviour:
   - {fileID: 6836696267796833845}
   - {fileID: -4472256891511550952}
   - {fileID: 2333933943102363684}
-  EditorParameters: []
+  EditorParameters:
+  - {fileID: -6572049028952917162}
   MasterBanks:
   - {fileID: 5264150132540470930}
   StringsBanks:
   - {fileID: -5206450814619468087}
-  stringsBankWriteTime: 637410331663670927
+  stringsBankWriteTime: 637411254593143867
   cacheVersion: 6
 --- !u!114 &1837811776856440671
 MonoBehaviour:
@@ -342,7 +363,7 @@ MonoBehaviour:
   Path: Fmod/NoCodeur/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637410440791698018
+  lastModified: 637411254593084043
   LoadResult: 0
   FileSizes: []
   Exists: 1
