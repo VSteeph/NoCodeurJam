@@ -39,6 +39,8 @@ public class CIvEnergyManager : MonoBehaviour
     [SerializeField] public int dodgeDurationIncrease;
     [HideInInspector] public float pushBackOnHit;
     [SerializeField] public float pushBackMonsterIncrease;
+    [Header("Refs")]
+    [SerializeField] private SceneChanger sceneChanger;
 
     private Dictionary<string, object> UpgradeWithBasedIncrease;
     private System.Random rand = new System.Random();
@@ -129,13 +131,13 @@ public class CIvEnergyManager : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(CompletedLevels+1);
+        sceneChanger.LoadScene(CompletedLevels+1);
         MainMenu = false;
     }
 
     public void BackToChoiceMenu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        sceneChanger.LoadScene(0);
         MainMenu =true;
         Lost = false;
     }
@@ -149,13 +151,13 @@ public class CIvEnergyManager : MonoBehaviour
 
     public void CaravanPerished()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(10);
+        sceneChanger.LoadScene(10);
         Lost = true;
     }
 
     public void PlayerPerished()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(11);
+        sceneChanger.LoadScene(11);
         CivilisationPopulation -= 10;
         Lost = true;
     }
